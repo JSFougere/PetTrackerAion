@@ -6,6 +6,41 @@ La petite fenêtre de suivi donne directement accès à Collection, Catalogue,
 Réglages, Session et Comptes. Il n'est plus nécessaire de passer par l'icône
 de la zone de notification. Les anciens accès restent disponibles.
 
+## Réglages, taille et noms français/anglais
+
+Le tracker est temporairement masqué quand sa fenêtre de réglages est visible.
+Il redevient éligible à l'affichage à la fermeture ou à la réduction des réglages,
+en respectant toujours le masquage manuel, le mode réservé au jeu et les règles
+d'expiration. Cette suppression temporaire ne change pas le paramètre `Visible`.
+
+Les huit bords et coins de la fenêtre permettent son redimensionnement en mode
+interactif déverrouillé. La largeur, la hauteur et la position sont enregistrées
+par les commandes existantes. Le contenu peut défiler si la hauteur choisie est
+petite. Les actualisations du worker ne réinitialisent pas une manipulation en
+cours. `Settings → Overlay → Reset tracker size` revient à la taille automatique.
+
+`Settings → Tracking → Langue des noms / Name language` permet de choisir
+English ou Français pour les noms de familiers et de monstres. Il ne s'agit pas
+encore d'une traduction intégrale des textes de l'interface. La recherche de la
+collection, du marchand et du catalogue reste bilingue quel que soit ce choix ;
+elle ignore la casse et les accents, y compris les accents Unicode décomposés.
+Par exemple, `tortue etoilee` et `Starturtle` trouvent le même familier, et
+`soldat arme krall` permet une recherche par nom de monstre français.
+
+Les tables embarquées couvrent 207 identifiants de familiers et 468 identifiants
+de monstres connus du projet. Les noms manquants gardent leur libellé d'origine.
+Les noms sont issus des tables publiques du client de SkeeveAN/Aion-DPS-Meter,
+au commit `72d409a5eef653d0a9e40637bb3854e2ee2382c8`, avec contrôle de la clé
+interne du familier. Les notices et la licence du projet source sont conservées.
+`tools/Import-LocalizedNames.ps1` reproduit cet import explicite ; aucun
+téléchargement de noms n'est effectué pendant l'utilisation du tracker.
+
+Validation de cette évolution : compilation sans avertissement ni erreur,
+881 contrôles moteur, 374 contrôles WPF et 61 contrôles de mise à jour réussis.
+Les tests de l'overlay simulent les événements de glissement hors écran et
+vérifient le verrouillage, les contraintes de taille, la sauvegarde, le masquage
+temporaire et le sélecteur de langue. Les essais en jeu restent nécessaires.
+
 Si le passage des clics au jeu est activé, l'overlay ne peut pas recevoir les
 clics sur ces boutons : utiliser le raccourci ou la zone de notification pour
 revenir au mode interactif, comme auparavant.

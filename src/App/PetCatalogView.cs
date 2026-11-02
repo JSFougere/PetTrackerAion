@@ -13,11 +13,16 @@ public sealed class PetCatalogView : UserControl
     readonly TextBlock count = Ui.Text("", 12, Ui.Muted);
     readonly ListView results = new() { MinHeight = 200, MaxHeight = 420 };
     readonly PetSearchResult[] entries = PetFinder.Entries.ToArray();
+    readonly Host host;
+    string renderedLanguage = "";
 
     public sealed record CatalogRow(int Id, string Name, string Family, string Regions, string Sources, string Availability);
 
     public PetCatalogView(Host host)
     {
+        this.host = host;
+        Loaded += (_, _) => { host.Changed += RefreshLanguage; Refresh(); };
+        Unloaded += (_, _) => host.Changed -= RefreshLanguage;
         var root = new StackPanel();
         Content = root;
         root.Children.Add(Ui.Text("Tous les familiers, toutes les régions", 16));
@@ -94,15 +99,21 @@ public sealed class PetCatalogView : UserControl
     static IEnumerable<string> Regions(PetSearchResult pet) => (pet.Location?.Maps.Select(m => m.Region) ?? Enumerable.Empty<string>())
         .Concat(pet.Location?.SoulSources?.Select(s => s.Region) ?? Enumerable.Empty<string>()).Where(s => !string.IsNullOrWhiteSpace(s)).Distinct();
 
+    void RefreshLanguage()
+    {
+        if (renderedLanguage != host.PetOverlayPreferences.NameLanguage) Refresh();
+    }
+
     void Refresh()
     {
-        var words = search.Text.Split((char[]?)null, StringSplitOptions.RemoveEmptyEntries);
         string? selected = region.SelectedIndex > 0 ? region.SelectedItem as string : null;
+        string language = host.PetOverlayPreferences.NameLanguage;
+        renderedLanguage = language;
         var rows = entries.Where(p => selected == null || Regions(p).Contains(selected)).Where(p =>
-            words.All(w => string.Join(" ", new[] { p.Label, PetFamily.Label(p.Pet.Id), string.Join(" ", Regions(p)), string.Join(" ", p.Creatures) }).Contains(w, StringComparison.OrdinalIgnoreCase)))
-            .Select(p => new CatalogRow(p.Pet.Id, p.Label, PetFamily.Label(p.Pet.Id),
+            LocalizedNames.Matches(p, search.Text))
+            .Select(p => new CatalogRow(p.Pet.Id, LocalizedNames.Pet(p.Pet.Id, p.Label, language), PetFamily.Label(p.Pet.Id),
                 string.Join(" · ", Regions(p)) is { Length: > 0 } locations ? locations : "À compléter",
-                string.Join(" · ", p.Creatures) is { Length: > 0 } sources ? sources : p.Acquisition?.Instructions ?? "À compléter",
+                string.Join(" · ", p.Location?.SoulSources?.Select(mob => LocalizedNames.Monster(mob.NpcId, mob.Name, language)) ?? p.Creatures.Select(name => LocalizedNames.Monster(name, language))) is { Length: > 0 } sources ? sources : p.Acquisition?.Instructions ?? "À compléter",
                 PetAcquisitions.IsRealMoneyOnly(p.Pet.Id) ? "Argent réel" : p.Location?.Maps.Any(m => !m.Global) == true ? "Certaines régions : Global non vérifié" : "Voir les sources"))
             .ToArray();
         results.ItemsSource = rows;

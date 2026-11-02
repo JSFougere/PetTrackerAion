@@ -65,8 +65,7 @@ public static class PetFinder
 
     public static IEnumerable<PetSearchResult> Search(string query, Profile? profile = null)
     {
-        var words = query.Split((char[]?)null, StringSplitOptions.RemoveEmptyEntries);
-        return Entries.Where(p => p.VisibleFor(profile) && words.All(w => p.Pet.Name.Contains(w, StringComparison.OrdinalIgnoreCase) || p.Creatures.Any(n => n.Contains(w, StringComparison.OrdinalIgnoreCase)) || (p.Location?.SoulSources?.Any(s => s.Region.Contains(w, StringComparison.OrdinalIgnoreCase)) ?? false) || (p.Acquisition?.Aliases.Any(n => n.Contains(w, StringComparison.OrdinalIgnoreCase)) ?? false)));
+        return Entries.Where(p => p.VisibleFor(profile) && LocalizedNames.Matches(p, query));
     }
 
     public static bool AllowedUrl(string url) => Uri.TryCreate(url, UriKind.Absolute, out var uri) && uri.Scheme == "https" && uri.Host == "aion2maps.com" && uri.IsDefaultPort && uri.UserInfo.Length == 0;

@@ -175,6 +175,10 @@ public sealed class SettingsWindow : Window
         var catalog = Page("Catalogue");
         catalog.Children.Add(new PetCatalogView(host));
         var tracker = Page("Tracking");
+        var language = Group(tracker, "Langue des noms / Name language");
+        Choice(language, "Familiers et monstres / Pets and monsters", new[] { "English", "Français" }, host.PetOverlayPreferences.NameLanguage == "fr" ? "Français" : "English",
+            value => Queue(nameof(AppSettings.NameLanguage), value == "Français" ? "fr" : "en"));
+        Help(language, "La recherche accepte toujours le français et l'anglais, sans accents ni distinction de majuscules. Les noms sans traduction disponible restent en anglais.");
         var pets = Group(tracker, "Pet list");
         Choice(pets, "Tracker mode", new[] { "Recent", "Nearby" }, host.PetOverlayPreferences.TrackerMode, v => Queue(nameof(AppSettings.TrackerMode), v), "Overlay view");
         Choice(pets, "Maximum shown pets", new[] { 3, 5, 8, 10 }, host.PetOverlayPreferences.RowLimit, v => Queue(nameof(AppSettings.RowLimit), v), "Pets shown");
@@ -205,6 +209,7 @@ public sealed class SettingsWindow : Window
         var display = Group(overlay, "Size and visibility");
         Slider(display, "Scale", nameof(AppSettings.Scale), .75, 1.5);
         Slider(display, "Background opacity", nameof(AppSettings.Opacity), .4, 1);
+        Actions(display, Ui.Button("Reset tracker size", async () => await host.Change(new("patch", Patch: SettingsPatch.Fields((nameof(AppSettings.OverlayWidth), null), (nameof(AppSettings.OverlayHeight), null))))));
         Check(display, "Compact pet rows", nameof(AppSettings.Compact));
         Check(display, "Only show over Aion 2", nameof(AppSettings.GameOnly));
         var interaction = Group(overlay, "Position and interaction");
@@ -600,6 +605,7 @@ public sealed class SettingsWindow : Window
         bindings.Add(options => combo.SelectedItem = label switch
         {
             "Tracker mode" => options.TrackerMode,
+            "Familiers et monstres / Pets and monsters" => options.NameLanguage == "fr" ? "Français" : "English",
             "Hide unrefreshed mobs after (seconds)" => options.NearbyStaleSeconds,
             "Maximum shown pets" => options.RowLimit,
             "Maximum pinned pets" => options.PinLimit,

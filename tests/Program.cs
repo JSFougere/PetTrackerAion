@@ -1248,6 +1248,7 @@ Console.WriteLine($"PASS: {checks} standalone checks");
 
 
 PetFinderChecks.Run(Check);
+LocalizationChecks.Run(Check);
 PetCollectionChecks.Run(Check);
 FarmingChecks.Run(Check);
 BlackMarketChecks.Run(Check, root, Identity, Snapshot, Frame);

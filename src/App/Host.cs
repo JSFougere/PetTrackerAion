@@ -15,6 +15,7 @@ public sealed class Host : IDisposable
     public WorkerView? View { get; private set; }
     public MerchantDisplay MerchantDisplay { get; } = new();
     public bool PreviewOnly { get; private set; }
+    public bool OverlaySuppressedBySettings => settings is { IsVisible: true, WindowState: not WindowState.Minimized };
     public string? ConnectionError { get; private set; }
     public bool ActivityCheckOnStart { get; set; }
     public AppUpdateService Updates { get; }
@@ -301,7 +302,7 @@ public sealed class Host : IDisposable
         bool hasRows = (Tracker.Ready && Activity.Select(Tracker, PetOverlayPreferences, DateTimeOffset.UtcNow).Any()) || MerchantDisplay.Select(view, DateTimeOffset.UtcNow).Count > 0;
         if (hasRows)
             revealEmpty = false;
-        bool show = (!PetOverlayPreferences.HideWhenEmpty || !Tracker.Ready || hasRows || revealEmpty) && PetOverlayPreferences.Visible && !StartHidden && (!PetOverlayPreferences.GameOnly || IsGameForeground(PetOverlayPreferences.GameProcesses));
+        bool show = !OverlaySuppressedBySettings && (!PetOverlayPreferences.HideWhenEmpty || !Tracker.Ready || hasRows || revealEmpty) && PetOverlayPreferences.Visible && !StartHidden && (!PetOverlayPreferences.GameOnly || IsGameForeground(PetOverlayPreferences.GameProcesses));
         SetFastPolling(show && view.Ready && PetOverlayPreferences.ExperimentalDirections && PetOverlayPreferences.TrackerMode == "Nearby");
         if (show)
         {
@@ -323,13 +324,14 @@ public sealed class Host : IDisposable
         foreach (int id in completedGoals)
         {
             var pet = view.Profile.Pets[id];
-            Notification?.Invoke($"{new PetNames().Resolve(pet)}: Rank {pet.TargetRank} farming goal reached");
+            Notification?.Invoke($"{LocalizedNames.Pet(pet.Id, new PetNames().Resolve(pet), PetOverlayPreferences.NameLanguage)}: Rank {pet.TargetRank} farming goal reached");
         }
         if (completedGoals.Count > 0 && PetOverlayPreferences.Sounds)
             System.Media.SystemSounds.Asterisk.Play();
         if (view.Increase != null && !completedGoals.Contains(view.Increase.PetId) && view.Increase != oldIncrease && view.LastSync is { } synced && view.Increase.SeenUtc >= synced)
         {
-            string name = new PetNames().Resolve(view.Profile.Pets[view.Increase.PetId]);
+            var pet = view.Profile.Pets[view.Increase.PetId];
+            string name = LocalizedNames.Pet(pet.Id, new PetNames().Resolve(pet), PetOverlayPreferences.NameLanguage);
             Notification?.Invoke(name + (view.Increase.Rank == 3 ? " reached MAX" : " reached Rank " + view.Increase.Rank));
             if (PetOverlayPreferences.Sounds)
                 System.Media.SystemSounds.Asterisk.Play();
@@ -430,21 +432,38 @@ public sealed class Host : IDisposable
         if (settings == null)
         {
             settings = new(this);
-            settings.Closed += (s, e) => settings = null;
+            if (PreviewOnly)
+            {
+                settings.WindowStartupLocation = WindowStartupLocation.Manual;
+                settings.Left = SystemParameters.VirtualScreenLeft + SystemParameters.VirtualScreenWidth + 2048;
+                settings.Top = SystemParameters.VirtualScreenTop + SystemParameters.VirtualScreenHeight + 2048;
+                settings.ShowInTaskbar = false;
+            }
+            settings.IsVisibleChanged += (_, _) => RefreshAfterSettings();
+            settings.StateChanged += (_, _) => RefreshAfterSettings();
+            settings.Closed += (s, e) => { settings = null; RefreshAfterSettings(); };
         }
 
         settings.Show();
         settings.Activate();
     }
 
+    void RefreshAfterSettings()
+    {
+        if (!disposed && View is { } view) Accept(view);
+    }
+
     public void ApplyAppearance()
     {
-        if (Overlay == null)
+        if (Overlay == null || Overlay.IsResizing)
             return;
         var s = PetOverlayPreferences;
         Overlay.Opacity = 1;
         Overlay.SetBackgroundOpacity(s.Opacity);
-        Overlay.Width = (s.Compact ? 300 : 340) * s.Scale;
+        Overlay.Width = (s.OverlayWidth ?? (s.Compact ? 300 : 340)) * s.Scale;
+        Overlay.SizeToContent = s.OverlayHeight.HasValue ? SizeToContent.Manual : SizeToContent.Height;
+        if (s.OverlayHeight.HasValue) Overlay.Height = s.OverlayHeight.Value * s.Scale;
+        Overlay.SetResizeEnabled(!s.Locked && !s.ClickThrough);
         if (Overlay.Content is FrameworkElement fe)
             fe.LayoutTransform = new ScaleTransform(s.Scale, s.Scale);
         Overlay.Resources["ArcanaGold"] = NativeTheme.Accent(s.Accent);

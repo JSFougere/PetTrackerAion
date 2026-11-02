@@ -30,6 +30,9 @@ public class AppSettings
     }
 
     public bool Visible { get; set; } = true;
+    public string NameLanguage { get; set; } = "en";
+    public double? OverlayWidth { get; set; }
+    public double? OverlayHeight { get; set; }
     public double? Left { get; set; }
     public double? Top { get; set; }
     public bool HideMaxed { get; set; }
@@ -64,6 +67,9 @@ public class AppSettings
 
     public void Normalize()
     {
+        if (NameLanguage is not ("fr" or "en")) NameLanguage = "en";
+        OverlayWidth = OverlayWidth is double width && double.IsFinite(width) ? Math.Clamp(width, 260, 1000) : null;
+        OverlayHeight = OverlayHeight is double height && double.IsFinite(height) ? Math.Clamp(height, 160, 1600) : null;
         FinderPresets = (FinderPresets ?? new()).Where(p => p != null && p.Valid)
             .Select(p => p with { Name = p.Name.Trim() }).DistinctBy(p => p.Name, StringComparer.OrdinalIgnoreCase).Take(10).ToList();
         StartWithWindows = false;

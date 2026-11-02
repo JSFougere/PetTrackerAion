@@ -6,6 +6,7 @@ namespace PetTracker;
 
 public sealed class FarmingMapCanvas(string assetRoot) : FrameworkElement
 {
+    public string NameLanguage { get; set; } = "en";
     readonly Dictionary<MapTile, BitmapSource> images = new();
     SpawnRegion? region;
     IReadOnlyList<SpawnPoint> points = Array.Empty<SpawnPoint>();
@@ -142,6 +143,6 @@ public sealed class FarmingMapCanvas(string assetRoot) : FrameworkElement
             return;
         }
         var nearest = points.Select(p => (Point: p, Distance: (Screen(p.X, p.Y) - at).LengthSquared)).OrderBy(p => p.Distance).FirstOrDefault();
-        ToolTip = !missingTiles && nearest.Point != null && nearest.Distance <= 100 ? nearest.Point.Name : null;
+        ToolTip = !missingTiles && nearest.Point != null && nearest.Distance <= 100 ? LocalizedNames.Monster(nearest.Point.NpcId, nearest.Point.Name, NameLanguage) : null;
     }
 }

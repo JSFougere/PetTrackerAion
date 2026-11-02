@@ -1,0 +1,2707 @@
+{
+  "Source": "https://github.com/SkeeveAN/Aion-DPS-Meter/tree/72d409a5eef653d0a9e40637bb3854e2ee2382c8",
+  "Pets": {
+    "1001": {
+      "Fr": "Dragon noir",
+      "En": "Black Dragon"
+    },
+    "1002": {
+      "Fr": "Ouvrier Krall",
+      "En": "Krall laborer"
+    },
+    "1003": {
+      "Fr": "Spectre de la forêt",
+      "En": "Forest Specter"
+    },
+    "1004": {
+      "Fr": "Fossa",
+      "En": "Fossa"
+    },
+    "1005": {
+      "Fr": "Klaw",
+      "En": "Klaw"
+    },
+    "1006": {
+      "Fr": "Sparkie",
+      "En": "Sparkie"
+    },
+    "1007": {
+      "Fr": "Cancérid",
+      "En": "Potcrab"
+    },
+    "1008": {
+      "Fr": "Jeune araignée à Od",
+      "En": "Baby Odyle Spider"
+    },
+    "1009": {
+      "Fr": "Kernon",
+      "En": "Kernon"
+    },
+    "1010": {
+      "Fr": "Assaillant Manduri",
+      "En": "Manduri Fighter"
+    },
+    "1011": {
+      "Fr": "Driton",
+      "En": "Skyray"
+    },
+    "1012": {
+      "Fr": "Fungie",
+      "En": "Fungie"
+    },
+    "1013": {
+      "Fr": "Essaim",
+      "En": "Swarm"
+    },
+    "1014": {
+      "Fr": "Chien de garde Drakan",
+      "En": "Drakan Guard Dog"
+    },
+    "1015": {
+      "Fr": "Kailin",
+      "En": "Kailin"
+    },
+    "1016": {
+      "Fr": "Slink",
+      "En": "Slink"
+    },
+    "1017": {
+      "Fr": "Chaman Krall",
+      "En": "Krall Warshaman"
+    },
+    "1018": {
+      "Fr": "Berserker Varg",
+      "En": "Varg Berserker"
+    },
+    "1021": {
+      "Fr": "Araignée à Od variante mutée",
+      "En": "Mutated Aberrant Odyle Spider"
+    },
+    "1022": {
+      "Fr": "Crasaur",
+      "En": "Crasaur"
+    },
+    "1025": {
+      "Fr": "Araignée à Od variante",
+      "En": "Aberrant Odyle Spider"
+    },
+    "1026": {
+      "Fr": "Guerrier Krall",
+      "En": "Krall Warrior"
+    },
+    "1027": {
+      "Fr": "Agrint desséché",
+      "En": "Withered Agrint"
+    },
+    "1028": {
+      "Fr": "Mutant Krao",
+      "En": "Krao Mutant"
+    },
+    "1029": {
+      "Fr": "Éclaireur Klaw",
+      "En": "Klaw Scout"
+    },
+    "1030": {
+      "Fr": "Guerrier gardien Nagarant",
+      "En": "Nagarant Guardian Warrior"
+    },
+    "1031": {
+      "Fr": "Travailleur Konutin",
+      "En": "Konutin Worker"
+    },
+    "1032": {
+      "Fr": "Keneire d'élite",
+      "En": "Elite Keneire"
+    },
+    "1033": {
+      "Fr": "Assaillant Manduri d'élite",
+      "En": "Elite Manduri Fighter"
+    },
+    "1034": {
+      "Fr": "Sparkie géant",
+      "En": "Giant Sparkie"
+    },
+    "1035": {
+      "Fr": "Skama",
+      "En": "Skama"
+    },
+    "1036": {
+      "Fr": "Lupyllini",
+      "En": "Lupyllini"
+    },
+    "1037": {
+      "Fr": "Crestlich mâle",
+      "En": "Male Crestlich"
+    },
+    "1038": {
+      "Fr": "Airon",
+      "En": "Airon"
+    },
+    "1039": {
+      "Fr": "Crestlich",
+      "En": "Crestlich"
+    },
+    "1040": {
+      "Fr": "Chaman Aullaeu",
+      "En": "Aullaeu Shaman"
+    },
+    "1041": {
+      "Fr": "Chauve-souris de grotte",
+      "En": "Cave Bat"
+    },
+    "1042": {
+      "Fr": "Ursus",
+      "En": "Ursus"
+    },
+    "1043": {
+      "Fr": "Ursus d'élite",
+      "En": "Elite Ursus"
+    },
+    "1044": {
+      "Fr": "Clone d'Aultross",
+      "En": "Aultross's Doppelganger"
+    },
+    "1045": {
+      "Fr": "Sylphène",
+      "En": "Sylphen"
+    },
+    "1046": {
+      "Fr": "Armadon",
+      "En": "Armadon"
+    },
+    "1047": {
+      "Fr": "Armadon variant",
+      "En": "Aberrant Armadon"
+    },
+    "1048": {
+      "Fr": "Esprit de la forêt",
+      "En": "Forest Spirit"
+    },
+    "1049": {
+      "Fr": "Esprit de la forêt muté",
+      "En": "Mutated Forest Spirit"
+    },
+    "1050": {
+      "Fr": "Gravi",
+      "En": "Gravi"
+    },
+    "1051": {
+      "Fr": "Gravi magique",
+      "En": "Magic Gravi"
+    },
+    "1052": {
+      "Fr": "Gravi à grandes feuilles",
+      "En": "Large Leaf Gravi"
+    },
+    "1053": {
+      "Fr": "Cancérid variant",
+      "En": "Aberrant Potcrab"
+    },
+    "1054": {
+      "Fr": "Guerrier Mumu",
+      "En": "Mumu Warrior"
+    },
+    "1055": {
+      "Fr": "Rat de tombe",
+      "En": "Grave Rat"
+    },
+    "1056": {
+      "Fr": "Sondeur Drakan",
+      "En": "Drakan Probe"
+    },
+    "1057": {
+      "Fr": "Coradon",
+      "En": "Coradon"
+    },
+    "1058": {
+      "Fr": "Murute de fumée noire",
+      "En": "Black Smoke Murute"
+    },
+    "1059": {
+      "Fr": "Abeille géante",
+      "En": "Giant Bee"
+    },
+    "1060": {
+      "Fr": "Tortue étoilée",
+      "En": "Starturtle"
+    },
+    "1061": {
+      "Fr": "Slime",
+      "En": "Slime"
+    },
+    "1062": {
+      "Fr": "Slime contaminé",
+      "En": "Contaminated Slime"
+    },
+    "1063": {
+      "Fr": "Oculazen observateur",
+      "En": "Vigilant Oculazen"
+    },
+    "1064": {
+      "Fr": "Oculazen",
+      "En": "Oculazen"
+    },
+    "1065": {
+      "Fr": "Biruta",
+      "En": "Biruta"
+    },
+    "1066": {
+      "Fr": "Papis",
+      "En": "Papis"
+    },
+    "1067": {
+      "Fr": "Scorpion",
+      "En": "Scorpion"
+    },
+    "1068": {
+      "Fr": "Cobaye Krao",
+      "En": "Krao Test Subject"
+    },
+    "1069": {
+      "Fr": "Esprit de la pierre",
+      "En": "Stone Spirit"
+    },
+    "1071": {
+      "Fr": "Insecte de cadavre",
+      "En": "Cadaver Insectoid"
+    },
+    "1072": {
+      "Fr": "Tog",
+      "En": "Tog"
+    },
+    "1073": {
+      "Fr": "Nepenthes",
+      "En": "Nepenthes"
+    },
+    "1074": {
+      "Fr": "Travailleur Kuru",
+      "En": "Kuru Worker"
+    },
+    "1075": {
+      "Fr": "Tâcheron Kuru",
+      "En": "Kuru Tinkerer"
+    },
+    "1077": {
+      "Fr": "Harcon",
+      "En": "Harcon"
+    },
+    "1078": {
+      "Fr": "Lutteur Urugugu",
+      "En": "Urugugu Brawler"
+    },
+    "1079": {
+      "Fr": "Esprit du vent exceptionnel",
+      "En": "Ultimate Wind Spirit"
+    },
+    "1080": {
+      "Fr": "K'nash la sentinelle",
+      "En": "Sentinel K'nash"
+    },
+    "1081": {
+      "Fr": "Dionae",
+      "En": "Dionae"
+    },
+    "1082": {
+      "Fr": "Esprit du feu exceptionnel",
+      "En": "Ultimate Fire Spirit"
+    },
+    "1083": {
+      "Fr": "Araignée",
+      "En": "Spider"
+    },
+    "1084": {
+      "Fr": "Kalgolem",
+      "En": "Kalgolem"
+    },
+    "1086": {
+      "Fr": "Fungen",
+      "En": "Fungen"
+    },
+    "1087": {
+      "Fr": "Pino",
+      "En": "Pino"
+    },
+    "1088": {
+      "Fr": "Travailleur Pino",
+      "En": "Pino Worker"
+    },
+    "1089": {
+      "Fr": "Skama variant",
+      "En": "Aberrant Skama"
+    },
+    "1090": {
+      "Fr": "Esprit de l'eau exceptionnel",
+      "En": "Ultimate Water Spirit"
+    },
+    "1091": {
+      "Fr": "Ignus de flamme rouge",
+      "En": "Red Spark Ignus"
+    },
+    "1092": {
+      "Fr": "Esprit du vent inférieur",
+      "En": "Lesser Wind Spirit"
+    },
+    "1093": {
+      "Fr": "Lakshmi onirique",
+      "En": "Phantasmal Lakshmi"
+    },
+    "1094": {
+      "Fr": "Esprit du vent intermédiaire",
+      "En": "Intermediate Wind Spirit"
+    },
+    "1095": {
+      "Fr": "Esprit du vent supérieur",
+      "En": "Superior Wind Spirit"
+    },
+    "1096": {
+      "Fr": "Esprit du feu supérieur",
+      "En": "Superior Fire Spirit"
+    },
+    "1097": {
+      "Fr": "Karnif",
+      "En": "Karnif"
+    },
+    "1098": {
+      "Fr": "Karnif modifié",
+      "En": "Modified Karnif"
+    },
+    "1099": {
+      "Fr": "Karnif d'élite",
+      "En": "Elite Karnif"
+    },
+    "1100": {
+      "Fr": "Esprit de la terre exceptionnel",
+      "En": "Ultimate Earth Spirit"
+    },
+    "1101": {
+      "Fr": "Gardien de la forêt",
+      "En": "Forest Guardian"
+    },
+    "1102": {
+      "Fr": "Gardien de la forêt desséchée",
+      "En": "Dried Up Forest Guardian"
+    },
+    "1103": {
+      "Fr": "Intendant du voile de Pretor",
+      "En": "Pretor Veil Administrator"
+    },
+    "1104": {
+      "Fr": "Frondeur Manduri",
+      "En": "Manduri Trebuchet Worker"
+    },
+    "1105": {
+      "Fr": "Herboriste Biruta",
+      "En": "Biruta Herbalist"
+    },
+    "1106": {
+      "Fr": "Tayga",
+      "En": "Tayga"
+    },
+    "1107": {
+      "Fr": "Gardien du sceau Krao",
+      "En": "Krao Seal Guardian"
+    },
+    "1108": {
+      "Fr": "Combattant d'amélioration Krall",
+      "En": "Enhanced Krall Combatant"
+    },
+    "1109": {
+      "Fr": "Guet d'amélioration Krall",
+      "En": "Enhanced Krall Sentry"
+    },
+    "1110": {
+      "Fr": "Kalgolem bleu",
+      "En": "Blue Kalgolem"
+    },
+    "1111": {
+      "Fr": "Lugi vif",
+      "En": "Swift Lugi"
+    },
+    "1112": {
+      "Fr": "Lugi du marchand itinérant",
+      "En": "Wandering Merchant Lugi"
+    },
+    "1114": {
+      "Fr": "Araignée cendrée",
+      "En": "Ashen Spider"
+    },
+    "1115": {
+      "Fr": "Superviseur Kuru",
+      "En": "Kuru Overseer"
+    },
+    "1116": {
+      "Fr": "Araignée des branches sèches",
+      "En": "Withered Branch Spider"
+    },
+    "1117": {
+      "Fr": "Araignée instable",
+      "En": "Unstable Spider"
+    },
+    "1118": {
+      "Fr": "Abeille variante",
+      "En": "Aberrant Bee"
+    },
+    "1119": {
+      "Fr": "Coradon variant",
+      "En": "Aberrant Coradon"
+    },
+    "1120": {
+      "Fr": "Jeune Kailin",
+      "En": "Young Kailin"
+    },
+    "1121": {
+      "Fr": "Jeune Slink",
+      "En": "Young Slink"
+    },
+    "1122": {
+      "Fr": "Jeune Tog",
+      "En": "Young Tog"
+    },
+    "1123": {
+      "Fr": "Jeune Ursus",
+      "En": "Young Ursus"
+    },
+    "1124": {
+      "Fr": "Zaif",
+      "En": "Zaif"
+    },
+    "1125": {
+      "Fr": "Zaif variant",
+      "En": "Aberrant Zaif"
+    },
+    "1126": {
+      "Fr": "Tog variant",
+      "En": "Aberrant Tog"
+    },
+    "1127": {
+      "Fr": "Esprit de la pierre Od",
+      "En": "Odyle Stone Spirit"
+    },
+    "1128": {
+      "Fr": "Slime de Drana",
+      "En": "Drana Slime"
+    },
+    "1129": {
+      "Fr": "Essaim de Drana",
+      "En": "Drana Swarm"
+    },
+    "1130": {
+      "Fr": "Insecte de cadavre muté",
+      "En": "Mutated Cadaver Insectoid"
+    },
+    "1131": {
+      "Fr": "Spore de Drana",
+      "En": "Drana Spore"
+    },
+    "1132": {
+      "Fr": "Lupyllini cendré",
+      "En": "Ashen Lupyllini"
+    },
+    "1133": {
+      "Fr": "Dionae de la forêt",
+      "En": "Forest Dionae"
+    },
+    "1134": {
+      "Fr": "Coradon de l'éternité",
+      "En": "Eternal Coradon"
+    },
+    "1135": {
+      "Fr": "Dionae cendré",
+      "En": "Ashen Dionae"
+    },
+    "1136": {
+      "Fr": "Rafflesia",
+      "En": "Rafflesia"
+    },
+    "1137": {
+      "Fr": "Travailleur Mumu",
+      "En": "Mumu Worker"
+    },
+    "1138": {
+      "Fr": "Superviseur Mumu",
+      "En": "Mumu Overseer"
+    },
+    "1139": {
+      "Fr": "Monstre du marais",
+      "En": "Swamp Monster"
+    },
+    "1140": {
+      "Fr": "Monstre de la forêt",
+      "En": "Forest Monster"
+    },
+    "1141": {
+      "Fr": "Targon du marais",
+      "En": "Marsh Targon"
+    },
+    "1142": {
+      "Fr": "Mutant déformé",
+      "En": "Distorted Mutant"
+    },
+    "1143": {
+      "Fr": "Ursus muté",
+      "En": "Mutated Ursus"
+    },
+    "1144": {
+      "Fr": "Gardien de la forêt muté",
+      "En": "Mutated Forest Guardian"
+    },
+    "1145": {
+      "Fr": "Valka mutant",
+      "En": "Mutated Insectoid Valka"
+    },
+    "1146": {
+      "Fr": "Pinopi le gardien des portes",
+      "En": "Gatekeeper Pinopi"
+    },
+    "1147": {
+      "Fr": "Dratona",
+      "En": "Dratona"
+    },
+    "1148": {
+      "Fr": "Kalgolem Drakana",
+      "En": "Drakana Kalgolem"
+    },
+    "1153": {
+      "Fr": "Brute mutante de Drana",
+      "En": "Drana Mutant Brute"
+    },
+    "1154": {
+      "Fr": "Brute mutante terne",
+      "En": "Faded Mutant Brute"
+    },
+    "1155": {
+      "Fr": "Esprit de l'eau supérieur",
+      "En": "Superior Water Spirit"
+    },
+    "1156": {
+      "Fr": "Klaw d'élite",
+      "En": "Elite Klaw"
+    },
+    "1157": {
+      "Fr": "Nettoyeur de cadavre",
+      "En": "Cadaver Cleaner"
+    },
+    "1158": {
+      "Fr": "Sram insecte venimeux",
+      "En": "Venomous Insect Sram"
+    },
+    "1159": {
+      "Fr": "Essaim parasitaire",
+      "En": "Parasite Swarm"
+    },
+    "1160": {
+      "Fr": "Contaminant au Drana",
+      "En": "Drana Contaminant"
+    },
+    "1161": {
+      "Fr": "Flotteur terne",
+      "En": "Faded Floater"
+    },
+    "1162": {
+      "Fr": "Kérubar",
+      "En": "Kerubar"
+    },
+    "1163": {
+      "Fr": "Basilic",
+      "En": "Basilisk"
+    },
+    "1164": {
+      "Fr": "Esprit de la terre inférieur",
+      "En": "Lesser Earth Spirit"
+    },
+    "1165": {
+      "Fr": "Esprit de la terre intermédiaire",
+      "En": "Intermediate Earth Spirit"
+    },
+    "1166": {
+      "Fr": "Esprit de la terre supérieur",
+      "En": "Superior Earth Spirit"
+    },
+    "1167": {
+      "Fr": "Statue gardienne de Pierre de flamme",
+      "En": "Flame Stone Guardian Statue"
+    },
+    "1168": {
+      "Fr": "Esprit de l'eau inférieur",
+      "En": "Lesser Water Spirit"
+    },
+    "1169": {
+      "Fr": "Esprit de l'eau intermédiaire",
+      "En": "Intermediate Water Spirit"
+    },
+    "1170": {
+      "Fr": "Kérubian",
+      "En": "Kerubian"
+    },
+    "1171": {
+      "Fr": "Kérubiel",
+      "En": "Kerubiel"
+    },
+    "1172": {
+      "Fr": "Travailleur Duduka",
+      "En": "Duduka Worker"
+    },
+    "1173": {
+      "Fr": "Catapulteur Duduka",
+      "En": "Duduka Trebuchet Worker"
+    },
+    "1174": {
+      "Fr": "Prédateur de Drana",
+      "En": "Drana Predator"
+    },
+    "1175": {
+      "Fr": "Prédateur terne",
+      "En": "Faded Predator"
+    },
+    "1176": {
+      "Fr": "Mudthorn",
+      "En": "Mudthorn"
+    },
+    "1177": {
+      "Fr": "Esprit ancien",
+      "En": "Ancient Spirit"
+    },
+    "1178": {
+      "Fr": "Guerrier de garde du Roi des esprits",
+      "En": "Spirit King's Bodyguard Warrior"
+    },
+    "1179": {
+      "Fr": "Mutant de Drana",
+      "En": "Drana Mutant"
+    },
+    "1180": {
+      "Fr": "Mutant terne",
+      "En": "Faded Mutant"
+    },
+    "1181": {
+      "Fr": "Brax",
+      "En": "Brax"
+    },
+    "1182": {
+      "Fr": "Tipule cadavérique sans âme d'élite",
+      "En": "Elite Soulless Corpse Gnat"
+    },
+    "1183": {
+      "Fr": "Tipule cadavérique sans âme",
+      "En": "Soulless Corpse Gnat"
+    },
+    "1184": {
+      "Fr": "Veilleur Drakan",
+      "En": "Drakan Watcher"
+    },
+    "1185": {
+      "Fr": "Tâcheron Dratona",
+      "En": "Dratona Tinkerer"
+    },
+    "1186": {
+      "Fr": "Sang toxique",
+      "En": "Poison Blood"
+    },
+    "1187": {
+      "Fr": "Esprit du feu intermédiaire",
+      "En": "Intermediate Fire Spirit"
+    },
+    "1188": {
+      "Fr": "Vivel",
+      "En": "Vivel"
+    },
+    "1189": {
+      "Fr": "Zaif apprivoisé",
+      "En": "Tamed Zaif"
+    },
+    "1190": {
+      "Fr": "Fungen à spores toxiques d'élite",
+      "En": "Elite Poisonous Spore Fungen"
+    },
+    "1191": {
+      "Fr": "Feruk furieux",
+      "En": "Furious Feruk"
+    },
+    "1192": {
+      "Fr": "Rotan à la lame d'argent",
+      "En": "Silver Blade Rotan"
+    },
+    "1193": {
+      "Fr": "Charretier Shulack intoxiqué",
+      "En": "Addicted Shulak Cart Worker"
+    },
+    "1194": {
+      "Fr": "Guardite",
+      "En": "Guardite"
+    },
+    "1195": {
+      "Fr": "Herboriste Dracuni",
+      "En": "Dracuni Herbalist"
+    },
+    "1196": {
+      "Fr": "Dratona d'élite",
+      "En": "Elite Dratona"
+    },
+    "1197": {
+      "Fr": "Guardite de surveillance",
+      "En": "Watcher Guardite"
+    },
+    "1198": {
+      "Fr": "Basilic cendré",
+      "En": "Ashen Basilisk"
+    },
+    "1199": {
+      "Fr": "Balgest de flamme",
+      "En": "Flame Barghest"
+    },
+    "1200": {
+      "Fr": "Prêtre d'élite Naga",
+      "En": "Naga Elite Priest"
+    },
+    "1201": {
+      "Fr": "Lupyllini modifié",
+      "En": "Modified Lupyllini"
+    },
+    "1202": {
+      "Fr": "Lupyllini décomposé",
+      "En": "Decomposed Lupyllini"
+    },
+    "1203": {
+      "Fr": "Karnif apprivoisé",
+      "En": "Tamed Karnif"
+    },
+    "1204": {
+      "Fr": "Pagati",
+      "En": "Pagati"
+    },
+    "1206": {
+      "Fr": "Guardite d'élite",
+      "En": "Elite Guardite"
+    },
+    "1207": {
+      "Fr": "Agrint",
+      "En": "Agrint"
+    },
+    "1208": {
+      "Fr": "Agrint cendré",
+      "En": "Ashen Agrint"
+    },
+    "1209": {
+      "Fr": "Agrint squelettique",
+      "En": "Thin Agrint"
+    },
+    "1210": {
+      "Fr": "Agrint à feuilles sèches",
+      "En": "Dry Leaf Agrint"
+    },
+    "1213": {
+      "Fr": "Esprit du feu inférieur",
+      "En": "Lesser Fire Spirit"
+    },
+    "1214": {
+      "Fr": "Esprit des ténèbres",
+      "En": "Black Spirit"
+    },
+    "1215": {
+      "Fr": "Saraswati prédateur",
+      "En": "Predator Saraswati"
+    },
+    "1216": {
+      "Fr": "Esprit obscur",
+      "En": "Dark Spirit"
+    },
+    "1217": {
+      "Fr": "Drana solidifié",
+      "En": "Congealed Drana"
+    },
+    "1218": {
+      "Fr": "Drana terne",
+      "En": "Faded Drana"
+    },
+    "1219": {
+      "Fr": "Zelophi",
+      "En": "Zelophi"
+    },
+    "1240": {
+      "Fr": "Lapin blanc",
+      "En": "White Bunny"
+    },
+    "1278": {
+      "Fr": "Hamster dodu",
+      "En": "Chonky Hamster"
+    },
+    "1299": {
+      "Fr": "Deux",
+      "En": "Two"
+    }
+  },
+  "Npcs": {
+    "2000925": {
+      "Fr": "Rafflesia",
+      "En": "Rafflesia"
+    },
+    "2000926": {
+      "Fr": "Papis terni",
+      "En": "Faded Papis"
+    },
+    "2000927": {
+      "Fr": "Papis terni",
+      "En": "Faded Papis"
+    },
+    "2000928": {
+      "Fr": "Papis terni",
+      "En": "Faded Papis"
+    },
+    "2000929": {
+      "Fr": "Papis terni",
+      "En": "Faded Papis"
+    },
+    "2000951": {
+      "Fr": "Papis terni",
+      "En": "Faded Papis"
+    },
+    "2000952": {
+      "Fr": "Coradon variant",
+      "En": "Aberrant Coradon"
+    },
+    "2000954": {
+      "Fr": "Brax",
+      "En": "Brax"
+    },
+    "2000955": {
+      "Fr": "Abeille à armure noire",
+      "En": "Black Armor Bee"
+    },
+    "2000956": {
+      "Fr": "Araignée des branches sèches",
+      "En": "Withered Branch Spider"
+    },
+    "2000957": {
+      "Fr": "Araignée des branches sèches",
+      "En": "Withered Branch Spider"
+    },
+    "2100002": {
+      "Fr": "Kalgolem dur",
+      "En": "Hard Kalgolem"
+    },
+    "2100004": {
+      "Fr": "Sylphène des Hautes Terres",
+      "En": "Highland Sylphen"
+    },
+    "2100006": {
+      "Fr": "Tog des cairns",
+      "En": "Cairn Tog"
+    },
+    "2100009": {
+      "Fr": "Papis docile",
+      "En": "Gentle Papis"
+    },
+    "2100015": {
+      "Fr": "Sparkie de la colline brillant",
+      "En": "Splendent Hill Sparkie"
+    },
+    "2100021": {
+      "Fr": "Targon du marais",
+      "En": "Marsh Targon"
+    },
+    "2100022": {
+      "Fr": "Esprit de vigne du marais",
+      "En": "Marsh Vine Spirit"
+    },
+    "2100023": {
+      "Fr": "Sylphène de la Rivière Ellun",
+      "En": "Ellun River Sylphen"
+    },
+    "2100025": {
+      "Fr": "Slime du marais",
+      "En": "Marsh Slime"
+    },
+    "2100030": {
+      "Fr": "Araignée à Od du marais",
+      "En": "Marsh Odyle Spider"
+    },
+    "2100031": {
+      "Fr": "Skama malodorant",
+      "En": "Foul Skama"
+    },
+    "2100032": {
+      "Fr": "Cancérid moussu du marais",
+      "En": "Marsh Moss Potcrab"
+    },
+    "2100033": {
+      "Fr": "Tortue étoilée côtière",
+      "En": "Coastal Starturtle"
+    },
+    "2100034": {
+      "Fr": "Araignée à Od côtière",
+      "En": "Coastal Odyle Spider"
+    },
+    "2100037": {
+      "Fr": "Crestlich au bec de pierre",
+      "En": "Stonebeak Crestlich"
+    },
+    "2100041": {
+      "Fr": "Fungie à chapeau rouge",
+      "En": "Red Cap Fungie"
+    },
+    "2100047": {
+      "Fr": "Petit Driton de la forêt",
+      "En": "Small Forest Skyray"
+    },
+    "2100048": {
+      "Fr": "Driton de la chute de la Rivière Ellun",
+      "En": "Ellun River Falls Skyray"
+    },
+    "2100070": {
+      "Fr": "Karnif éclaireur",
+      "En": "Scouting Karnif"
+    },
+    "2100072": {
+      "Fr": "Soldat de guet Krall amélioré",
+      "En": "Enhanced Krall Sentry"
+    },
+    "2100073": {
+      "Fr": "Soldat d'assaut Krall",
+      "En": "Krall Assault Trooper"
+    },
+    "2100074": {
+      "Fr": "Chaman Krall",
+      "En": "Krall Warshaman"
+    },
+    "2100075": {
+      "Fr": "Soldat armé Krall",
+      "En": "Krall Armed Soldier"
+    },
+    "2100078": {
+      "Fr": "Klaw errant",
+      "En": "Wandering Klaw"
+    },
+    "2100079": {
+      "Fr": "Teegant le garde du corps",
+      "En": "Bodyguard Teegant"
+    },
+    "2100096": {
+      "Fr": "Karnif violent",
+      "En": "Unruly Karnif"
+    },
+    "2100097": {
+      "Fr": "Combattant Krall amélioré",
+      "En": "Enhanced Krall Combatant"
+    },
+    "2100130": {
+      "Fr": "Karnif entraîné",
+      "En": "Trained Karnif"
+    },
+    "2100142": {
+      "Fr": "Esprit de vigne contaminé",
+      "En": "Contaminated Vine Spirit"
+    },
+    "2100143": {
+      "Fr": "Agrint décomposé",
+      "En": "Decaying Agrint"
+    },
+    "2100144": {
+      "Fr": "Airon au petit bec",
+      "En": "Smallbeak Airon"
+    },
+    "2100145": {
+      "Fr": "Tog affamé",
+      "En": "Hungry Tog"
+    },
+    "2100150": {
+      "Fr": "Crestlich femelle de la Rivière Ellun",
+      "En": "Ellun River Crestlich Female"
+    },
+    "2100151": {
+      "Fr": "Crestlich mâle de la Rivière Ellun",
+      "En": "Ellun River Crestlich Male"
+    },
+    "2100157": {
+      "Fr": "Travailleur Konutin de Tolbas",
+      "En": "Tolbas Konutin Worker"
+    },
+    "2100160": {
+      "Fr": "Nepenthes de Tolbas",
+      "En": "Tolbas Nepenthes"
+    },
+    "2100163": {
+      "Fr": "Fossa en patrouille",
+      "En": "Patrolling Fossa"
+    },
+    "2100165": {
+      "Fr": "Slink de Tolbas",
+      "En": "Tolbas Slink"
+    },
+    "2100172": {
+      "Fr": "Ursus à cornes dures",
+      "En": "Hardhorn Ursus"
+    },
+    "2100173": {
+      "Fr": "Jeune Ursus à cornes",
+      "En": "Baby Horn Ursus"
+    },
+    "2100174": {
+      "Fr": "Karnif féroce",
+      "En": "Ferocious Karnif"
+    },
+    "2100179": {
+      "Fr": "Agrint de la forêt",
+      "En": "Forest Agrint"
+    },
+    "2100180": {
+      "Fr": "Travailleur Kuru de Tolbas",
+      "En": "Tolbas Kuru Worker"
+    },
+    "2100181": {
+      "Fr": "Tâcheron Kuru de Tolbas",
+      "En": "Tolbas Kuru Tinkerer"
+    },
+    "2100182": {
+      "Fr": "Driton du lac de la Forêt de Tolbas",
+      "En": "Tolbas Forest Lake Skyray"
+    },
+    "2100183": {
+      "Fr": "Vagabond Biruta",
+      "En": "Biruta Wanderer"
+    },
+    "2100188": {
+      "Fr": "Slink de la Terre humide",
+      "En": "Wetland Slink"
+    },
+    "2100189": {
+      "Fr": "Jeune Slink de la Terre humide",
+      "En": "Young Wetland Slink"
+    },
+    "2100215": {
+      "Fr": "Crasaur aux écailles d'eau",
+      "En": "Aquascale Crasaur"
+    },
+    "2100216": {
+      "Fr": "Airon au bec pointu",
+      "En": "Pointbeak Airon"
+    },
+    "2100217": {
+      "Fr": "Brax du champ",
+      "En": "Field Brax"
+    },
+    "2100219": {
+      "Fr": "Sylphène de la Rivière Ellun",
+      "En": "Ellun River Sylphen"
+    },
+    "2100220": {
+      "Fr": "Papis de la Rivière Ellun",
+      "En": "Ellun River Papis"
+    },
+    "2100231": {
+      "Fr": "Esprit de l'eau",
+      "En": "Water Spirit"
+    },
+    "2100273": {
+      "Fr": "Sparkie sauvage",
+      "En": "Wild Sparkie"
+    },
+    "2100283": {
+      "Fr": "Octaside à coquille blanche",
+      "En": "White Shell Octaside"
+    },
+    "2100285": {
+      "Fr": "Gravi de la colline de la Rivière Ellun",
+      "En": "Ellun River Hill Gravi"
+    },
+    "2100286": {
+      "Fr": "Abeille à motifs noirs",
+      "En": "Black Pattern Bee"
+    },
+    "2100288": {
+      "Fr": "Tog du champ",
+      "En": "Field Tog"
+    },
+    "2100303": {
+      "Fr": "Brax vorace",
+      "En": "Hungry Brax"
+    },
+    "2100305": {
+      "Fr": "Sparkie de prairie",
+      "En": "Meadow Sparkie"
+    },
+    "2100348": {
+      "Fr": "Karnif de Tolbas",
+      "En": "Tolbas Karnif"
+    },
+    "2100349": {
+      "Fr": "Karnif scélérat de Tolbas",
+      "En": "Ferocious Tolbas Karnif"
+    },
+    "2100350": {
+      "Fr": "Targon de la Forêt de Tolbas",
+      "En": "Tolbas Forest Targon"
+    },
+    "2100376": {
+      "Fr": "Skama du lac",
+      "En": "Lake Skama"
+    },
+    "2100453": {
+      "Fr": "Armadon brillant",
+      "En": "Splendent Armadon"
+    },
+    "2100454": {
+      "Fr": "Kalgolem brillant",
+      "En": "Splendent Kalgolem"
+    },
+    "2100456": {
+      "Fr": "Fungen à chapeau rouge",
+      "En": "Red Cap Fungen"
+    },
+    "2100458": {
+      "Fr": "Zelophi côtier",
+      "En": "Coastal Zelophi"
+    },
+    "2100460": {
+      "Fr": "Esprit contaminé",
+      "En": "Contaminated Spirit"
+    },
+    "2100472": {
+      "Fr": "Sylphène variant",
+      "En": "Aberrant Sylphen"
+    },
+    "2100473": {
+      "Fr": "Jeune Slink de Tolbas",
+      "En": "Tolbas Young Slink"
+    },
+    "2100480": {
+      "Fr": "Sentinelle Krall",
+      "En": "Krall Sentinel"
+    },
+    "2100481": {
+      "Fr": "Karnif sensible",
+      "En": "Sensitive Karnif"
+    },
+    "2100550": {
+      "Fr": "Abeille rayée",
+      "En": "Stripe Bee"
+    },
+    "2100551": {
+      "Fr": "Abeille rayée géante",
+      "En": "Giant Stripe Bee"
+    },
+    "2100552": {
+      "Fr": "Ursus du col",
+      "En": "Ridge Ursus"
+    },
+    "2100554": {
+      "Fr": "Araignée du col",
+      "En": "Ridge Spider"
+    },
+    "2100555": {
+      "Fr": "Esprit de la forêt du col",
+      "En": "Ridge Forest Spirit"
+    },
+    "2100556": {
+      "Fr": "Driton du col",
+      "En": "Ridge Skyray"
+    },
+    "2100557": {
+      "Fr": "Assaillant Manduri errant",
+      "En": "Wandering Manduri Fighter"
+    },
+    "2100558": {
+      "Fr": "Zaif à crinière jaune",
+      "En": "Yellow-Maned Zaif"
+    },
+    "2100560": {
+      "Fr": "Ursus violent du col",
+      "En": "Ridge Violent Ursus"
+    },
+    "2100565": {
+      "Fr": "Sylphène du col",
+      "En": "Ridge Sylphen"
+    },
+    "2100566": {
+      "Fr": "Zaif des maraudeurs",
+      "En": "Marauders Zaif"
+    },
+    "2100569": {
+      "Fr": "Assaillant Manduri errant",
+      "En": "Wandering Manduri Fighter"
+    },
+    "2100573": {
+      "Fr": "Zaif de la Colline rocheuse",
+      "En": "Rock Hill Zaif"
+    },
+    "2100583": {
+      "Fr": "Vivel du plateau",
+      "En": "Highland Vivel"
+    },
+    "2100600": {
+      "Fr": "Esprit corrompu",
+      "En": "Corrupted Spirit"
+    },
+    "2100601": {
+      "Fr": "Esprit de vigne du Canyon",
+      "En": "Canyon Vine Spirit"
+    },
+    "2100605": {
+      "Fr": "Esprit de l'air",
+      "En": "Air Spirit"
+    },
+    "2100607": {
+      "Fr": "Driton du Canyon",
+      "En": "Canyon Skyray"
+    },
+    "2100608": {
+      "Fr": "Crasaur docile",
+      "En": "Docile Crasaur"
+    },
+    "2100609": {
+      "Fr": "Airon au bec dur",
+      "En": "Hardbeak Airon"
+    },
+    "2100610": {
+      "Fr": "Cancérid plat",
+      "En": "Flat Potcrab"
+    },
+    "2100611": {
+      "Fr": "Esprit de la forêt du Canyon profond",
+      "En": "Deep Canyon Forest Spirit"
+    },
+    "2100612": {
+      "Fr": "Agrint du Canyon desséché",
+      "En": "Withered Canyon Agrint"
+    },
+    "2100613": {
+      "Fr": "Driton du lac du Canyon",
+      "En": "Canyon Lake Skyray"
+    },
+    "2100650": {
+      "Fr": "Gravi à tige rouge",
+      "En": "Red Stalk Gravi"
+    },
+    "2100651": {
+      "Fr": "Gravi à grandes feuilles",
+      "En": "Large Leaf Gravi"
+    },
+    "2100652": {
+      "Fr": "Agrint squelettique",
+      "En": "Thin Agrint"
+    },
+    "2100653": {
+      "Fr": "Esprit de la terre égaré",
+      "En": "Wandering Earth Spirit"
+    },
+    "2100654": {
+      "Fr": "Papis du jardin",
+      "En": "Garden Papis"
+    },
+    "2100655": {
+      "Fr": "Ursus impétueux",
+      "En": "Confused Ursus"
+    },
+    "2100656": {
+      "Fr": "Esprit obscur égaré",
+      "En": "Wandering Dark Spirit"
+    },
+    "2100657": {
+      "Fr": "Esprit de l'eau égaré",
+      "En": "Wandering Water Spirit"
+    },
+    "2100658": {
+      "Fr": "Esprit du vent égaré",
+      "En": "Wandering Wind Spirit"
+    },
+    "2100659": {
+      "Fr": "Gravi magique d'illusion",
+      "En": "Illusion Magic Gravi"
+    },
+    "2100660": {
+      "Fr": "Gardien du jardin",
+      "En": "Garden Guardian"
+    },
+    "2100662": {
+      "Fr": "Spectre de vigne corrompu",
+      "En": "Tainted Vine Specter"
+    },
+    "2100663": {
+      "Fr": "Araignée du jardin",
+      "En": "Garden Spider"
+    },
+    "2100664": {
+      "Fr": "Esprit du feu infernal",
+      "En": "Hellfire Spirit"
+    },
+    "2100665": {
+      "Fr": "Esprit d'eau vive",
+      "En": "Torrent Spirit"
+    },
+    "2100666": {
+      "Fr": "Esprit du vent glacial",
+      "En": "Brisk Spirit"
+    },
+    "2100667": {
+      "Fr": "Esprit de roche étrange",
+      "En": "Peculiar Rock Spirit"
+    },
+    "2100698": {
+      "Fr": "Vieil Agrint",
+      "En": "Old Agrint"
+    },
+    "2100699": {
+      "Fr": "Coradon du jardin",
+      "En": "Garden Coradon"
+    },
+    "2100700": {
+      "Fr": "Kalgolem cendré",
+      "En": "Ashen Kalgolem"
+    },
+    "2100709": {
+      "Fr": "Scorpion contaminé",
+      "En": "Contaminated Scorpion"
+    },
+    "2100710": {
+      "Fr": "Skama à queue jaune",
+      "En": "Yellow-Tailed Skama"
+    },
+    "2100711": {
+      "Fr": "Masse de vignes mutées",
+      "En": "Mutated Vine Bundle"
+    },
+    "2100712": {
+      "Fr": "Guardite incontrôlable",
+      "En": "Uncontrollable Guardite"
+    },
+    "2100714": {
+      "Fr": "Agrint contaminé",
+      "En": "Contaminated Agrint"
+    },
+    "2100715": {
+      "Fr": "Masse de vignes contaminées",
+      "En": "Contaminated Vine Bundle"
+    },
+    "2100716": {
+      "Fr": "Guardite contaminé",
+      "En": "Contaminated Guardite"
+    },
+    "2100717": {
+      "Fr": "Slime toxique contaminé",
+      "En": "Contaminated Poison Slime"
+    },
+    "2100718": {
+      "Fr": "Ansas sacré",
+      "En": "Divine Ansas"
+    },
+    "2100740": {
+      "Fr": "Brax du plateau docile",
+      "En": "Docile Highland Brax"
+    },
+    "2100741": {
+      "Fr": "Airon au long bec du plateau",
+      "En": "Longbeak Highland Airon"
+    },
+    "2100742": {
+      "Fr": "Karnif à crinière coriace du plateau",
+      "En": "Toughmane Highland Karnif"
+    },
+    "2100743": {
+      "Fr": "Sylphène du plateau",
+      "En": "Highland Sylphen"
+    },
+    "2100744": {
+      "Fr": "Nepenthes du plateau rouge",
+      "En": "Scarlet Highland Nepenthes"
+    },
+    "2100745": {
+      "Fr": "Araignée à Od du plateau",
+      "En": "Highland Odyle Spider"
+    },
+    "2100746": {
+      "Fr": "Lupyllini à queue emplumée",
+      "En": "Tail Feather Lupyllini"
+    },
+    "2100747": {
+      "Fr": "Lupyllini du plateau contaminé",
+      "En": "Contaminated Highland Lupyllini"
+    },
+    "2100748": {
+      "Fr": "Zaif de la Forêt du plateau",
+      "En": "Highland Forest Zaif"
+    },
+    "2100750": {
+      "Fr": "Crestlich mâle du plateau",
+      "En": "Highland Crestlich Male"
+    },
+    "2100751": {
+      "Fr": "Armadon sauvage du plateau",
+      "En": "Highland Wild Armadon"
+    },
+    "2100752": {
+      "Fr": "Karnif du plateau",
+      "En": "Highland Karnif"
+    },
+    "2100753": {
+      "Fr": "Sparkie à Od du plateau",
+      "En": "Highland Odyle Sparkie"
+    },
+    "2100793": {
+      "Fr": "Tog rayé sauvage",
+      "En": "Wild Stripe Tog"
+    },
+    "2100795": {
+      "Fr": "Sparkie à Od du plateau",
+      "En": "Highland Odyle Sparkie"
+    },
+    "2100796": {
+      "Fr": "Sparkie à Od géant du plateau",
+      "En": "Highland Giant Odyle Sparkie"
+    },
+    "2100797": {
+      "Fr": "Zaif du plateau",
+      "En": "Highland Zaif"
+    },
+    "2100799": {
+      "Fr": "Crestlich femelle du plateau",
+      "En": "Highland Crestlich Female"
+    },
+    "2100802": {
+      "Fr": "Karnif apprivoisé",
+      "En": "Tamed Karnif"
+    },
+    "2100805": {
+      "Fr": "Karnif apprivoisé",
+      "En": "Tamed Karnif"
+    },
+    "2100807": {
+      "Fr": "Esprit distordu",
+      "En": "Distorted Spirit"
+    },
+    "2100808": {
+      "Fr": "Tortue étoilée d'étang",
+      "En": "Pond Starturtle"
+    },
+    "2100812": {
+      "Fr": "Esprit de pierre de la colline",
+      "En": "Hill Stone Spirit"
+    },
+    "2100813": {
+      "Fr": "Zaif de la colline",
+      "En": "Hill Zaif"
+    },
+    "2100815": {
+      "Fr": "Cobaye Lupyllini",
+      "En": "Lupyllini Test Subject"
+    },
+    "2100816": {
+      "Fr": "Manduri de la colline",
+      "En": "Hill Manduri"
+    },
+    "2100817": {
+      "Fr": "Ursus de la colline",
+      "En": "Hill Ursus"
+    },
+    "2100818": {
+      "Fr": "Jeune Ursus de la colline",
+      "En": "Hill Young Ursus"
+    },
+    "2100819": {
+      "Fr": "Tog de la colline",
+      "En": "Hill Tog"
+    },
+    "2100821": {
+      "Fr": "Coradon de la colline",
+      "En": "Hill Coradon"
+    },
+    "2100828": {
+      "Fr": "Coradon de la colline",
+      "En": "Hill Coradon"
+    },
+    "2100832": {
+      "Fr": "Driton d'étang",
+      "En": "Pond Skyray"
+    },
+    "2100854": {
+      "Fr": "Oculazen responsable des travaux",
+      "En": "Labor Manager Oculazen"
+    },
+    "2100855": {
+      "Fr": "Soldat soigneur Krall de plantation",
+      "En": "Modified Krall Healer"
+    },
+    "2100866": {
+      "Fr": "Gestionnaire de transformation de Drana",
+      "En": "Drana Processing Maintenance Machine"
+    },
+    "2100867": {
+      "Fr": "Ouvrier de transformation Dracuni",
+      "En": "Dracuni Processing Laborer"
+    },
+    "2100872": {
+      "Fr": "Éclaireur Drakan de la Zone de transformation",
+      "En": "Processing Facility Drakan Scout"
+    },
+    "2100901": {
+      "Fr": "Dratona de la Forêt rouge",
+      "En": "Scarlet Forest Dratona"
+    },
+    "2100907": {
+      "Fr": "Skama muté de Drana",
+      "En": "Drana Mutated Skama"
+    },
+    "2100908": {
+      "Fr": "Cancérid muté de Drana",
+      "En": "Drana Mutated Potcrab"
+    },
+    "2100910": {
+      "Fr": "Guerrier Krall modifié",
+      "En": "Modified Krall Warrior"
+    },
+    "2100911": {
+      "Fr": "Chauve-souris mutée de Drana",
+      "En": "Drana Mutated Bat"
+    },
+    "2100914": {
+      "Fr": "Ouvrier Krall muté",
+      "En": "Mutated Krall Laborer"
+    },
+    "2100950": {
+      "Fr": "Apprenti chaman Aullaeu",
+      "En": "Aullaeu Apprentice Shaman"
+    },
+    "2100953": {
+      "Fr": "Travailleur Pino",
+      "En": "Pino Worker"
+    },
+    "2100954": {
+      "Fr": "Ouvrier Pino",
+      "En": "Pino Laborer"
+    },
+    "2100955": {
+      "Fr": "Travailleur Pino farouche",
+      "En": "Harsh Pino Worker"
+    },
+    "2100964": {
+      "Fr": "Tâcheron Kuru farouche",
+      "En": "Harsh Kuru Tinkerer"
+    },
+    "2100986": {
+      "Fr": "Sparkie de la Forêt Aullaeu",
+      "En": "Aullaeu Forest Sparkie"
+    },
+    "2100987": {
+      "Fr": "Sparkie géant de la Forêt Aullaeu",
+      "En": "Aullaeu Forest Giant Sparkie"
+    },
+    "2100992": {
+      "Fr": "Sparkie des Hautes Terres",
+      "En": "Highland Sparkie"
+    },
+    "2100993": {
+      "Fr": "Sparkie géant des Hautes Terres",
+      "En": "Highland Giant Sparkie"
+    },
+    "2101002": {
+      "Fr": "Chien de garde Drakan",
+      "En": "Drakan Guard Dog"
+    },
+    "2101005": {
+      "Fr": "Cobaye Krall",
+      "En": "Krall Test Subject"
+    },
+    "2101009": {
+      "Fr": "Chien de garde Drakan de Nahid",
+      "En": "Nahid Drakan Guard Dog"
+    },
+    "2101014": {
+      "Fr": "Traqueur d'intrus",
+      "En": "Intruder Seeker"
+    },
+    "2101021": {
+      "Fr": "Kailin de la Rivière Ellun",
+      "En": "Ellun River Kailin"
+    },
+    "2101022": {
+      "Fr": "Jeune Kailin de la Rivière Ellun",
+      "En": "Ellun River Young Kailin"
+    },
+    "2101023": {
+      "Fr": "Araignée à Od de la Forêt Aullaeu",
+      "En": "Aullaeu Forest Odyle Spider"
+    },
+    "2101075": {
+      "Fr": "Kérubar éternel",
+      "En": "Eternal Kerubar"
+    },
+    "2101076": {
+      "Fr": "Kérubian d'éternité",
+      "En": "Eternal Kerubian"
+    },
+    "2101077": {
+      "Fr": "Kérubiel de l'éternité",
+      "En": "Eternal Kerubiel"
+    },
+    "2101079": {
+      "Fr": "Kérubar éternel",
+      "En": "Eternal Kerubar"
+    },
+    "2101080": {
+      "Fr": "Kérubian d'éternité",
+      "En": "Eternal Kerubian"
+    },
+    "2101082": {
+      "Fr": "Tortue étoilée de l'éternité",
+      "En": "Eternal Starturtle"
+    },
+    "2101083": {
+      "Fr": "Crasaur de l'éternité",
+      "En": "Eternal Crasaur"
+    },
+    "2101085": {
+      "Fr": "Zelophi de l'éternité",
+      "En": "Eternal Zelophi"
+    },
+    "2101086": {
+      "Fr": "Lupyllini de l'éternité",
+      "En": "Eternal Lupyllini"
+    },
+    "2101087": {
+      "Fr": "Esprit du feu de l'éternité",
+      "En": "Eternal Fire Spirit"
+    },
+    "2101088": {
+      "Fr": "Esprit de l'eau de l'éternité",
+      "En": "Eternal Water Spirit"
+    },
+    "2101089": {
+      "Fr": "Esprit de la terre de l'éternité",
+      "En": "Eternal Earth Spirit"
+    },
+    "2101096": {
+      "Fr": "Esprit du vent de l'éternité",
+      "En": "Eternal Wind Spirit"
+    },
+    "2101097": {
+      "Fr": "Slink de l'éternité",
+      "En": "Eternal Slink"
+    },
+    "2101098": {
+      "Fr": "Crabe moussu de l'éternité",
+      "En": "Eternal Moss Crab"
+    },
+    "2101099": {
+      "Fr": "Agrint de l'éternité",
+      "En": "Eternal Agrint"
+    },
+    "2101100": {
+      "Fr": "Esprit du feu cruel",
+      "En": "Violent Fire Spirit"
+    },
+    "2101101": {
+      "Fr": "Esprit de l'eau cruel",
+      "En": "Violent Water Spirit"
+    },
+    "2101102": {
+      "Fr": "Esprit de la terre cruel",
+      "En": "Violent Earth Spirit"
+    },
+    "2101103": {
+      "Fr": "Esprit du vent cruel",
+      "En": "Violent Wind Spirit"
+    },
+    "2101123": {
+      "Fr": "Driton du lac de la Rivière Ellun",
+      "En": "Ellun River Lake Skyray"
+    },
+    "2101124": {
+      "Fr": "Driton de la Vallée de Cantas",
+      "En": "Cantas Valley Skyray"
+    },
+    "2101125": {
+      "Fr": "Gravi de Tolbas",
+      "En": "Tolbas Gravi"
+    },
+    "2101126": {
+      "Fr": "Gravi magique de Tolbas",
+      "En": "Tolbas Magic Gravi"
+    },
+    "2101132": {
+      "Fr": "Driton du lac",
+      "En": "Lake Skyray"
+    },
+    "2101133": {
+      "Fr": "Travailleur Kuru de l'éternité",
+      "En": "Eternal Kuru Worker"
+    },
+    "2101134": {
+      "Fr": "Tâcheron Kuru de l'éternité",
+      "En": "Eternal Kuru Tinkerer"
+    },
+    "2101135": {
+      "Fr": "Mutant de Drana d'Île de l'Éternité",
+      "En": "Eternal Drana Mutant"
+    },
+    "2101136": {
+      "Fr": "Travailleur Kuru de l'éternité",
+      "En": "Eternal Kuru Worker"
+    },
+    "2101137": {
+      "Fr": "Tâcheron Kuru de l'éternité",
+      "En": "Eternal Kuru Tinkerer"
+    },
+    "2101139": {
+      "Fr": "Superviseur Kuru de l'éternité",
+      "En": "Eternal Kuru Overseer"
+    },
+    "2101278": {
+      "Fr": "Egetis vorace",
+      "En": "Gluttonous Egetis"
+    },
+    "2110501": {
+      "Fr": "Essaim de Drana de rubis",
+      "En": "Crimson Drana Swarm"
+    },
+    "2110502": {
+      "Fr": "Sporophore muté de rubis",
+      "En": "Crimson Mutated Spore"
+    },
+    "2110503": {
+      "Fr": "Mutant de Drana de rubis",
+      "En": "Crimson Drana Mutant"
+    },
+    "2110505": {
+      "Fr": "Prédateur de Drana de rubis",
+      "En": "Crimson Drana Predator"
+    },
+    "2110506": {
+      "Fr": "Assaillant Manduri de rubis",
+      "En": "Crimson Manduri Fighter"
+    },
+    "2110507": {
+      "Fr": "Frondeur Manduri de rubis",
+      "En": "Crimson Manduri Slinger"
+    },
+    "2110508": {
+      "Fr": "Agrint de rubis",
+      "En": "Crimson Agrint"
+    },
+    "2110509": {
+      "Fr": "Araignée de rubis",
+      "En": "Crimson Spider"
+    },
+    "2110512": {
+      "Fr": "Crabe moussu de rubis",
+      "En": "Eternal Moss Crab"
+    },
+    "2110513": {
+      "Fr": "Rafflesia de rubis",
+      "En": "Crimson Rafflesia"
+    },
+    "2300104": {
+      "Fr": "Harcon amélioré",
+      "En": "Enhanced Harcon"
+    },
+    "2300310": {
+      "Fr": "Rotan à la lame d'argent",
+      "En": "Silver Blade Rotan"
+    },
+    "2300311": {
+      "Fr": "Ignus de flamme rouge",
+      "En": "Red Spark Ignus"
+    },
+    "2300312": {
+      "Fr": "Murute de fumée noire",
+      "En": "Black Smoke Murute"
+    },
+    "2300401": {
+      "Fr": "Lakshmi onirique",
+      "En": "Phantasmal Lakshmi"
+    },
+    "2300403": {
+      "Fr": "Saraswati le Prédateur",
+      "En": "Predator Saraswati"
+    },
+    "2310104": {
+      "Fr": "Harcon amélioré",
+      "En": "Enhanced Harcon"
+    },
+    "2310310": {
+      "Fr": "Rotan à la lame d'argent",
+      "En": "Silver Blade Rotan"
+    },
+    "2310311": {
+      "Fr": "Ignus de flamme rouge",
+      "En": "Red Spark Ignus"
+    },
+    "2310312": {
+      "Fr": "Murute de fumée noire",
+      "En": "Black Smoke Murute"
+    },
+    "2310401": {
+      "Fr": "Lakshmi onirique",
+      "En": "Phantasmal Lakshmi"
+    },
+    "2310403": {
+      "Fr": "Saraswati le Prédateur",
+      "En": "Predator Saraswati"
+    },
+    "2320104": {
+      "Fr": "Harcon amélioré",
+      "En": "Enhanced Harcon"
+    },
+    "2320310": {
+      "Fr": "Rotan à la lame d'argent",
+      "En": "Silver Blade Rotan"
+    },
+    "2320311": {
+      "Fr": "Ignus de flamme rouge",
+      "En": "Red Spark Ignus"
+    },
+    "2320312": {
+      "Fr": "Murute de fumée noire",
+      "En": "Black Smoke Murute"
+    },
+    "2320401": {
+      "Fr": "Lakshmi onirique",
+      "En": "Phantasmal Lakshmi"
+    },
+    "2320403": {
+      "Fr": "Saraswati le Prédateur",
+      "En": "Predator Saraswati"
+    },
+    "2400001": {
+      "Fr": "Mutant distordu",
+      "En": "Twisted Mutant"
+    },
+    "2400002": {
+      "Fr": "Taupe à coquille rouge",
+      "En": "Red Shell Mole"
+    },
+    "2400004": {
+      "Fr": "Lupyllini décomposé",
+      "En": "Decomposed Lupyllini"
+    },
+    "2400009": {
+      "Fr": "Drana solidifié",
+      "En": "Congealed Drana"
+    },
+    "2400010": {
+      "Fr": "Prédateur de Drana",
+      "En": "Drana Predator"
+    },
+    "2400014": {
+      "Fr": "Kalgolem du Site de crash",
+      "En": "Crash Site Kalgolem"
+    },
+    "2400015": {
+      "Fr": "Slime de Drana",
+      "En": "Drana Slime"
+    },
+    "2400018": {
+      "Fr": "Insecte de cadavre de Drana",
+      "En": "Drana Cadaver Insectoid"
+    },
+    "2400054": {
+      "Fr": "Agrint aux yeux rouges",
+      "En": "Red Eye Agrint"
+    },
+    "2400056": {
+      "Fr": "Rafflesia",
+      "En": "Rafflesia"
+    },
+    "2400057": {
+      "Fr": "Vampire Vivel",
+      "En": "Vampire Vivel"
+    },
+    "2400061": {
+      "Fr": "Spectre condensé",
+      "En": "Condensed Specter"
+    },
+    "2400080": {
+      "Fr": "Essaim contaminé",
+      "En": "Contaminated Swarm"
+    },
+    "2400116": {
+      "Fr": "Tâcheron Dratona",
+      "En": "Dratona Tinkerer"
+    },
+    "2400143": {
+      "Fr": "Sondeur du poste de surveillance",
+      "En": "Outpost Probe"
+    },
+    "2400161": {
+      "Fr": "Soldat de soutien Dratona",
+      "En": "Dratona Supporter"
+    },
+    "2400162": {
+      "Fr": "Sondeur Drakan",
+      "En": "Drakan Probe"
+    },
+    "2400163": {
+      "Fr": "Driton de Tranein",
+      "En": "Tranein Skyray"
+    },
+    "2400214": {
+      "Fr": "Gardien de la forêt muté",
+      "En": "Mutated Forest Guardian"
+    },
+    "2400217": {
+      "Fr": "Ursus cendré",
+      "En": "Ashen Ursus"
+    },
+    "2400221": {
+      "Fr": "Élim muté",
+      "En": "Mutated Elim"
+    },
+    "2400225": {
+      "Fr": "Forestier brûlé",
+      "En": "Burned Forester"
+    },
+    "2400230": {
+      "Fr": "Araignée cendrée",
+      "En": "Ashen Spider"
+    },
+    "2400240": {
+      "Fr": "Basilic de cendre noire",
+      "En": "Black Ash Basilisk"
+    },
+    "2400248": {
+      "Fr": "Dionae cendré",
+      "En": "Ashen Dionae"
+    },
+    "2400249": {
+      "Fr": "Armadon desséché",
+      "En": "Withered Armadon"
+    },
+    "2400254": {
+      "Fr": "Fossa Daeva renégat",
+      "En": "Daeva Renegade Fossa"
+    },
+    "2400257": {
+      "Fr": "Karnif du Clan des Lames",
+      "En": "Blades Karnif"
+    },
+    "2400275": {
+      "Fr": "Nettoyeur de cadavres des ruines",
+      "En": "Ruins Corpse Cleaner"
+    },
+    "2400301": {
+      "Fr": "Esprit de pierre terne",
+      "En": "Faded Stone Spirit"
+    },
+    "2400302": {
+      "Fr": "Esprit du tourbillon",
+      "En": "Whirlwind Spirit"
+    },
+    "2400303": {
+      "Fr": "Esprit de flamme",
+      "En": "Flame Spirit"
+    },
+    "2400306": {
+      "Fr": "Esprit d'embrun",
+      "En": "Water Mist Spirit"
+    },
+    "2400307": {
+      "Fr": "Gravi rose",
+      "En": "Pink Gravi"
+    },
+    "2400310": {
+      "Fr": "Esprit d'humus",
+      "En": "Corroded Soil Spirit"
+    },
+    "2400311": {
+      "Fr": "Sang toxique maudit",
+      "En": "Cursed Poison Blood"
+    },
+    "2400312": {
+      "Fr": "Gardien esprit consumé",
+      "En": "Consumed Spirit Guardian"
+    },
+    "2400313": {
+      "Fr": "Klaw consumé",
+      "En": "Consumed Klaw"
+    },
+    "2400319": {
+      "Fr": "Araignée roche-flammes",
+      "En": "Flame Rock Spider"
+    },
+    "2400320": {
+      "Fr": "Slime violent",
+      "En": "Unruly Slime"
+    },
+    "2400324": {
+      "Fr": "Esprit de brise",
+      "En": "Soft Breeze Spirit"
+    },
+    "2400325": {
+      "Fr": "Esprit d'embrasement",
+      "En": "Burning Ember Spirit"
+    },
+    "2400327": {
+      "Fr": "Crasaur sensible",
+      "En": "Sensitive Crasaur"
+    },
+    "2400328": {
+      "Fr": "Kalgolem courroucé",
+      "En": "Angry Kalgolem"
+    },
+    "2400329": {
+      "Fr": "Gravi magique de la Forêt de purification",
+      "En": "Purifying Forest Magic Gravi"
+    },
+    "2400337": {
+      "Fr": "Esprit de la forêt",
+      "En": "Forest Spirit"
+    },
+    "2400341": {
+      "Fr": "Sparkie à Od aux branches sèches",
+      "En": "Withered Branch Odyle Sparkie"
+    },
+    "2400342": {
+      "Fr": "Gravi à grandes feuilles",
+      "En": "Large Leaf Gravi"
+    },
+    "2400350": {
+      "Fr": "Planton Mumu",
+      "En": "Mumu Watcher"
+    },
+    "2400351": {
+      "Fr": "Travailleur Mumu",
+      "En": "Mumu Worker"
+    },
+    "2400359": {
+      "Fr": "Chien de garde Drakan",
+      "En": "Drakan Guard Dog"
+    },
+    "2400362": {
+      "Fr": "Sylphène",
+      "En": "Sylphen"
+    },
+    "2400363": {
+      "Fr": "Crabe moussu",
+      "En": "Moss Crab"
+    },
+    "2400364": {
+      "Fr": "Oculazen observateur",
+      "En": "Vigilant Oculazen"
+    },
+    "2400374": {
+      "Fr": "Tortue étoilée de plage",
+      "En": "Beach Starturtle"
+    },
+    "2400375": {
+      "Fr": "Brax",
+      "En": "Brax"
+    },
+    "2400376": {
+      "Fr": "Ursus",
+      "En": "Ursus"
+    },
+    "2400377": {
+      "Fr": "Jeune Ursus",
+      "En": "Young Ursus"
+    },
+    "2400378": {
+      "Fr": "Lupyllini décomposé",
+      "En": "Decomposed Lupyllini"
+    },
+    "2400380": {
+      "Fr": "Dratona",
+      "En": "Dratona"
+    },
+    "2400382": {
+      "Fr": "Gestionnaire de transformation de Drana",
+      "En": "Drana Processing Maintenance Machine"
+    },
+    "2400384": {
+      "Fr": "Administrateur Drakan",
+      "En": "Drakan Manager"
+    },
+    "2400385": {
+      "Fr": "Berserker Varg",
+      "En": "Varg Berserker"
+    },
+    "2400390": {
+      "Fr": "Travailleur Mumu évadé",
+      "En": "Escaped Mumu Worker"
+    },
+    "2400391": {
+      "Fr": "Lupyllini féroce",
+      "En": "Ferocious Lupyllini"
+    },
+    "2400412": {
+      "Fr": "Nettoyeur de cadavres féroce",
+      "En": "Ferocious Cadaver Cleaner"
+    },
+    "2400413": {
+      "Fr": "Tipule cadavérique sans âme",
+      "En": "Soulless Corpse Gnat"
+    },
+    "2400414": {
+      "Fr": "Bête apprivoisée",
+      "En": "Tamed Beast"
+    },
+    "2400415": {
+      "Fr": "Agrint des ruines",
+      "En": "Ruin Agrint"
+    },
+    "2400418": {
+      "Fr": "Nettoyeur de cadavres féroce",
+      "En": "Ferocious Cadaver Cleaner"
+    },
+    "2400455": {
+      "Fr": "Charretier Shulack déchaîné",
+      "En": "Rampaging Shulak Cart Worker"
+    },
+    "2400456": {
+      "Fr": "Insecte de minerai géant",
+      "En": "Giant Ore Insectoid"
+    },
+    "2400466": {
+      "Fr": "Sparkie de Fafnite lumineux",
+      "En": "Fafnite Luminous Sparkie"
+    },
+    "2400470": {
+      "Fr": "Scorpion de minerai",
+      "En": "Ore Scorpion"
+    },
+    "2400471": {
+      "Fr": "Kalgolem bleu",
+      "En": "Blue Kalgolem"
+    },
+    "2400473": {
+      "Fr": "Insecte de minerai géant adulte",
+      "En": "Giant Ore Insectoid Adult"
+    },
+    "2400476": {
+      "Fr": "Brute mutante terne",
+      "En": "Faded Mutant Brute"
+    },
+    "2400477": {
+      "Fr": "Mutant décoloré",
+      "En": "Faded Mutant"
+    },
+    "2400478": {
+      "Fr": "Masse terne",
+      "En": "Faded Chunk"
+    },
+    "2400479": {
+      "Fr": "Flotteur terne",
+      "En": "Faded Floater"
+    },
+    "2400480": {
+      "Fr": "Prédateur terne",
+      "En": "Faded Predator"
+    },
+    "2400481": {
+      "Fr": "Mudthorn intoxiqué",
+      "En": "Addicted Mudthorn"
+    },
+    "2400503": {
+      "Fr": "Bête apprivoisée du Clan des Lames",
+      "En": "Tamed Blades Beast"
+    },
+    "2400519": {
+      "Fr": "Tortue étoilée",
+      "En": "Starturtle"
+    },
+    "2400520": {
+      "Fr": "Slink côtier",
+      "En": "Coastal Slink"
+    },
+    "2400564": {
+      "Fr": "Tayga de troupe",
+      "En": "Search Party Tayga"
+    },
+    "2400567": {
+      "Fr": "Airon du Canyon",
+      "En": "Canyon Airon"
+    },
+    "2400568": {
+      "Fr": "Jeune Airon du Canyon",
+      "En": "Baby Canyon Airon"
+    },
+    "2400570": {
+      "Fr": "Guerrier de Gribade Mumu",
+      "En": "Gribade Mumu Warrior"
+    },
+    "2400578": {
+      "Fr": "Zaif doré",
+      "En": "Golden Zaif"
+    },
+    "2400583": {
+      "Fr": "Tayga de la garde",
+      "En": "Guard Troopers Tayga"
+    },
+    "2400587": {
+      "Fr": "Bête armée de patrouille Drakan",
+      "En": "Drakan Patrol Armed Beast"
+    },
+    "2400591": {
+      "Fr": "Veilleur de patrouille Drakan",
+      "En": "Drakan Patrol Watcher"
+    },
+    "2400594": {
+      "Fr": "Papis terni",
+      "En": "Faded Papis"
+    },
+    "2400605": {
+      "Fr": "Assaillant Manduri des Griffes Noires",
+      "En": "Black Claw Manduri Fighter"
+    },
+    "2400606": {
+      "Fr": "Guetteur Mumu",
+      "En": "Mumu Watcher"
+    },
+    "2400609": {
+      "Fr": "Garde du corps de l'unité du chef",
+      "En": "Chief's Bodyguard"
+    },
+    "2400611": {
+      "Fr": "Tayga apprivoisé",
+      "En": "Tamed Tayga"
+    },
+    "2400612": {
+      "Fr": "Travailleur Duduka",
+      "En": "Duduka Worker"
+    },
+    "2400613": {
+      "Fr": "Catapulteur Duduka",
+      "En": "Duduka Slinger"
+    },
+    "2400615": {
+      "Fr": "Éclaireur Manduri des Griffes Noires",
+      "En": "Black Claw Manduri Scout"
+    },
+    "2400617": {
+      "Fr": "Combattant Manduri des Griffes Noires",
+      "En": "Black Claw Manduri Combatant"
+    },
+    "2400655": {
+      "Fr": "Chien de garde du Bataillon de Lagta",
+      "En": "Lagta Brigade Guard Dog"
+    },
+    "2400658": {
+      "Fr": "Traqueur du Bataillon de Lagta",
+      "En": "Lagta Brigade Seeker"
+    },
+    "2400707": {
+      "Fr": "Vestige de sous-espace",
+      "En": "Remnant of Subspace"
+    },
+    "2400708": {
+      "Fr": "Esprit des ténèbres",
+      "En": "Black Spirit"
+    },
+    "2400711": {
+      "Fr": "Oculazen",
+      "En": "Oculazen"
+    },
+    "2400731": {
+      "Fr": "Gravi instable",
+      "En": "Unstable Gravi"
+    },
+    "2400734": {
+      "Fr": "Esprit d'Od terne",
+      "En": "Faded Odyle Spirit"
+    },
+    "2400735": {
+      "Fr": "Rafflesia instable",
+      "En": "Unstable Rafflesia"
+    },
+    "2400736": {
+      "Fr": "Kailin instable",
+      "En": "Unstable Kailin"
+    },
+    "2400737": {
+      "Fr": "Jeune Kailin instable",
+      "En": "Unstable Young Kailin"
+    },
+    "2400738": {
+      "Fr": "Esprit d'eau intermédiaire instable",
+      "En": "Unstable Intermediate Water Spirit"
+    },
+    "2400739": {
+      "Fr": "Esprit d'eau supérieur instable",
+      "En": "Unstable Superior Water Spirit"
+    },
+    "2400743": {
+      "Fr": "Sang toxique instable",
+      "En": "Unstable Poison Blood"
+    },
+    "2400744": {
+      "Fr": "Araignée cendrée instable",
+      "En": "Unstable Ashen Spider"
+    },
+    "2400745": {
+      "Fr": "Araignée au sang toxique instable",
+      "En": "Unstable Poison Blood Spider"
+    },
+    "2400746": {
+      "Fr": "Cueilleur au sang toxique",
+      "En": "Poison Blood Gatherer"
+    },
+    "2400748": {
+      "Fr": "Esprit du feu intermédiaire instable",
+      "En": "Unstable Intermediate Fire Spirit"
+    },
+    "2400749": {
+      "Fr": "Esprit du feu supérieur instable",
+      "En": "Unstable Superior Fire Spirit"
+    },
+    "2400750": {
+      "Fr": "Agrint instable",
+      "En": "Unstable Agrint"
+    },
+    "2400751": {
+      "Fr": "Gardien de la Forêt instable",
+      "En": "Unstable Forest Guardian"
+    },
+    "2400755": {
+      "Fr": "Crabe moussu côtier",
+      "En": "Coastal Moss Crab"
+    },
+    "2400801": {
+      "Fr": "Kérubar",
+      "En": "Kerubar"
+    },
+    "2400802": {
+      "Fr": "Kérubian",
+      "En": "Kerubian"
+    },
+    "2400803": {
+      "Fr": "Kérubiel",
+      "En": "Kerubiel"
+    },
+    "2400808": {
+      "Fr": "Tortue étoilée",
+      "En": "Starturtle"
+    },
+    "2400809": {
+      "Fr": "Crasaur",
+      "En": "Crasaur"
+    },
+    "2400811": {
+      "Fr": "Zelophi",
+      "En": "Zelophi"
+    },
+    "2400812": {
+      "Fr": "Crabe moussu côtier",
+      "En": "Coastal Moss Crab"
+    },
+    "2400813": {
+      "Fr": "Rafflesia",
+      "En": "Rafflesia"
+    },
+    "2400814": {
+      "Fr": "Lupyllini modifié",
+      "En": "Modified Lupyllini"
+    },
+    "2400815": {
+      "Fr": "Gardien de l'esprit du feu immortel",
+      "En": "Immortal Fire Spirit Guardian"
+    },
+    "2400816": {
+      "Fr": "Gardien de l'esprit de l'eau immortel",
+      "En": "Immortal Water Spirit Guardian"
+    },
+    "2400817": {
+      "Fr": "Gardien de l'esprit de la terre immortel",
+      "En": "Immortal Earth Spirit Guardian"
+    },
+    "2400818": {
+      "Fr": "Gardien de l'esprit du vent immortel",
+      "En": "Immortal Wind Spirit Guardian"
+    },
+    "2400819": {
+      "Fr": "Slink côtier",
+      "En": "Coastal Slink"
+    },
+    "2400821": {
+      "Fr": "Esprit du feu immortel",
+      "En": "Immortal Fire Spirit"
+    },
+    "2400822": {
+      "Fr": "Esprit de l'eau immortel",
+      "En": "Immortal Water Spirit"
+    },
+    "2400823": {
+      "Fr": "Esprit de la terre immortel",
+      "En": "Immortal Earth Spirit"
+    },
+    "2400824": {
+      "Fr": "Esprit du vent immortel",
+      "En": "Immortal Wind Spirit"
+    },
+    "2400825": {
+      "Fr": "Agrint d'Île",
+      "En": "Island Agrint"
+    },
+    "2400831": {
+      "Fr": "Travailleur Kuru",
+      "En": "Kuru Worker"
+    },
+    "2400832": {
+      "Fr": "Tâcheron Kuru",
+      "En": "Kuru Tinkerer"
+    },
+    "2400833": {
+      "Fr": "Superviseur Kuru",
+      "En": "Kuru Overseer"
+    },
+    "2400834": {
+      "Fr": "Mutant de Drana",
+      "En": "Drana Mutant"
+    },
+    "2400900": {
+      "Fr": "Abeille à armure noire",
+      "En": "Black Armor Bee"
+    },
+    "2400902": {
+      "Fr": "Araignée des branches sèches",
+      "En": "Withered Branch Spider"
+    },
+    "2400903": {
+      "Fr": "Papis terni",
+      "En": "Faded Papis"
+    },
+    "2400905": {
+      "Fr": "Kailin",
+      "En": "Kailin"
+    },
+    "2400906": {
+      "Fr": "Jeune Kailin",
+      "En": "Young Kailin"
+    },
+    "2400907": {
+      "Fr": "Coradon variant",
+      "En": "Aberrant Coradon"
+    },
+    "2400909": {
+      "Fr": "Slink",
+      "En": "Slink"
+    },
+    "2400910": {
+      "Fr": "Jeune Slink",
+      "En": "Young Slink"
+    },
+    "2400911": {
+      "Fr": "Lupyllini décomposé",
+      "En": "Decomposed Lupyllini"
+    },
+    "2400912": {
+      "Fr": "Tog",
+      "En": "Tog"
+    },
+    "2400914": {
+      "Fr": "Brax",
+      "En": "Brax"
+    },
+    "2400916": {
+      "Fr": "Ursus",
+      "En": "Ursus"
+    },
+    "2400917": {
+      "Fr": "Jeune Ursus",
+      "En": "Young Ursus"
+    },
+    "2400919": {
+      "Fr": "Herboriste Biruta",
+      "En": "Biruta Herbalist"
+    },
+    "2400920": {
+      "Fr": "Vagabond Biruta",
+      "En": "Biruta Wanderer"
+    },
+    "2400930": {
+      "Fr": "Abeille à armure noire",
+      "En": "Black Armor Bee"
+    },
+    "2400933": {
+      "Fr": "Araignée des branches sèches",
+      "En": "Withered Branch Spider"
+    },
+    "2400934": {
+      "Fr": "Kailin",
+      "En": "Kailin"
+    },
+    "2400935": {
+      "Fr": "Jeune Kailin",
+      "En": "Young Kailin"
+    },
+    "2400936": {
+      "Fr": "Tog variant",
+      "En": "Aberrant Tog"
+    },
+    "2400938": {
+      "Fr": "Papis terni",
+      "En": "Faded Papis"
+    },
+    "2400939": {
+      "Fr": "Araignée des branches sèches",
+      "En": "Withered Branch Spider"
+    },
+    "2400940": {
+      "Fr": "Papis terni",
+      "En": "Faded Papis"
+    },
+    "2400941": {
+      "Fr": "Coradon d'éternité",
+      "En": "Eternal Coradon"
+    },
+    "2400943": {
+      "Fr": "Slink",
+      "En": "Slink"
+    },
+    "2400945": {
+      "Fr": "Driton du lac",
+      "En": "Lake Skyray"
+    },
+    "2400946": {
+      "Fr": "Araignée des branches sèches",
+      "En": "Withered Branch Spider"
+    },
+    "2400947": {
+      "Fr": "Papis terni",
+      "En": "Faded Papis"
+    },
+    "2400948": {
+      "Fr": "Araignée des branches sèches",
+      "En": "Withered Branch Spider"
+    },
+    "2400949": {
+      "Fr": "Rafflesia",
+      "En": "Rafflesia"
+    },
+    "2400950": {
+      "Fr": "Jeune Slink",
+      "En": "Young Slink"
+    },
+    "2406035": {
+      "Fr": "Balakh le prédateur colossal",
+      "En": "Predator Colossus Balakh"
+    },
+    "2406071": {
+      "Fr": "Renulf la tempête pourpre",
+      "En": "Crimson Blizzard Renulf"
+    },
+    "2600001": {
+      "Fr": "Essaim d'Abysse",
+      "En": "Abyss Swarm"
+    },
+    "2600002": {
+      "Fr": "Klaw d'Abysse",
+      "En": "Abyss Klaw"
+    },
+    "2600003": {
+      "Fr": "Rotan usé d'Abysse",
+      "En": "Abyss Rusty Rotan"
+    },
+    "2600004": {
+      "Fr": "Karnif d'Abysse",
+      "En": "Abyss Karnif"
+    },
+    "2600011": {
+      "Fr": "Variant d'essaim d'Abysse",
+      "En": "Abyss Aberrant Swarn"
+    },
+    "2600012": {
+      "Fr": "Variant Klaw d'Abysse",
+      "En": "Abyss Aberrant Klaw"
+    },
+    "2600013": {
+      "Fr": "Rotan à la lame usée d'Abysse",
+      "En": "Abyss Old Blade Rotan"
+    },
+    "2600014": {
+      "Fr": "Karnif de la troupe d'Abysse",
+      "En": "Abyss Search Party Karnif"
+    },
+    "2600021": {
+      "Fr": "Mutant d'essaim d'Abysse",
+      "En": "Abyss Swarm Mutant"
+    },
+    "2600023": {
+      "Fr": "Slime de soufre d'Abysse",
+      "En": "Abyss Sulfur Slime"
+    },
+    "2600024": {
+      "Fr": "Skama de soufre d'Abysse",
+      "En": "Abyss Sulfur Skama"
+    },
+    "2600026": {
+      "Fr": "Agrint de soufre desséché",
+      "En": "Withered Sulfur Agrint"
+    },
+    "2600027": {
+      "Fr": "Agrint de soufre",
+      "En": "Sulfur Agrint"
+    },
+    "2600028": {
+      "Fr": "Agrint de soufre squelettique",
+      "En": "Thin Sulfur Agrint"
+    },
+    "2600029": {
+      "Fr": "Mutant Klaw d'Abysse",
+      "En": "Abyss Klaw Mutant"
+    },
+    "2600036": {
+      "Fr": "Lutteur Nagarant d'Abysse",
+      "En": "Abyss Nagarant Brawler"
+    },
+    "2600041": {
+      "Fr": "Guerrier Nagarant d'Abysse",
+      "En": "Abyss Nagarant Warrior"
+    },
+    "2600042": {
+      "Fr": "Mage des ténèbres Naga d'Abysse",
+      "En": "Abyss Naga Dark Mage"
+    },
+    "2600045": {
+      "Fr": "Insecte mutant rouge d'Abysse",
+      "En": "Abyss Red Mutated Insectoid"
+    },
+    "2600046": {
+      "Fr": "Insecte mutant d'Od d'Abysse",
+      "En": "Abyss Odyle Mutated Insectoid"
+    },
+    "2600047": {
+      "Fr": "Jeune Slink d'Abysse",
+      "En": "Abyss Young Slink"
+    },
+    "2600048": {
+      "Fr": "Slink d'Abysse",
+      "En": "Abyss Slink"
+    },
+    "2600049": {
+      "Fr": "Nepenthes fétide d'Abysse",
+      "En": "Abyss Nasty Nepenthes"
+    },
+    "2600050": {
+      "Fr": "Zelophi d'Abysse",
+      "En": "Abyss Zelophi"
+    },
+    "2600051": {
+      "Fr": "Kalgolem d'Abîme",
+      "En": "Abyssal Kalgolem"
+    },
+    "2600052": {
+      "Fr": "Bête éclaireuse Drakan des Abysses",
+      "En": "Abyss Drakan Scout Beast"
+    },
+    "2600056": {
+      "Fr": "Esprit du rocher d'Abîme",
+      "En": "Abyss Rock Spirit"
+    },
+    "2600061": {
+      "Fr": "Coradon d'Abysse",
+      "En": "Abyss Coradon"
+    },
+    "2600066": {
+      "Fr": "Guerrier esprit du vieil arbre",
+      "En": "Old Tree Spirit Warrior"
+    },
+    "2600069": {
+      "Fr": "Esprit corrompu d'Abysse",
+      "En": "Abyss Corrupted Spirit"
+    },
+    "2600070": {
+      "Fr": "Kalgolem des racines",
+      "En": "Root Kalgolem"
+    },
+    "2600071": {
+      "Fr": "Agrint des racines",
+      "En": "Root Agrint"
+    }
+  }
+}

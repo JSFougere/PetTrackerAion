@@ -39,6 +39,16 @@ public static class CatalogChecks
         check(list.Items.Count > 0 && list.Items.Cast<PetCatalogView.CatalogRow>().All(p => p.Regions.Contains("Verteron")), "Catalogue shows Elyos territory without character-faction filtering");
         search.Text = "no-such-pet-998899";
         check(list.Items.Count == 0, "Catalogue handles an empty search result");
+        region.SelectedIndex = 0;
+        var original = host.View!;
+        host.Change(new("patch", Patch: SettingsPatch.Fields((nameof(AppSettings.NameLanguage), "fr")))) .GetAwaiter().GetResult();
+        search.Text = "tortue etoilee";
+        check(list.Items.Cast<PetCatalogView.CatalogRow>().Any(p => p.Id == 1060 && p.Name == "Tortue étoilée"), "Catalogue searches unaccented French and displays the selected name language");
+        search.Text = "Starturtle";
+        check(list.Items.Cast<PetCatalogView.CatalogRow>().Any(p => p.Id == 1060), "English search remains available with French display");
+        search.Text = "soldat arme krall";
+        check(list.Items.Cast<PetCatalogView.CatalogRow>().Any(p => p.Id == 1002), "Catalogue searches French monster aliases without accents");
+        host.Preview(original);
         window.Close();
         check(host.PreviewOnly, "Catalogue checks use an isolated preview without capture");
         Program.Save(host.Overlay!, System.IO.Path.Combine(folder, "overlay-navigation.png"), 340, 510);

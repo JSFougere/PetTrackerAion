@@ -57,3 +57,12 @@ Pet-family soul crystal icons are AION 2 game artwork, copyright NCSOFT / NC Cor
 Map/source references: https://aion2maps.com/ and https://aion2.gaming.tools/
 Attribution does not establish a license to redistribute game artwork or data.
 See LEGAL.md for the project's intellectual-property and testing notice.
+
+English/French pet and NPC names: selected records from the game-data tables in
+SkeeveAN/Aion-DPS-Meter, commit 72d409a5eef653d0a9e40637bb3854e2ee2382c8.
+https://github.com/SkeeveAN/Aion-DPS-Meter/tree/72d409a5eef653d0a9e40637bb3854e2ee2382c8
+Upstream project copyright (c) 2026 SkeeveTV; MIT license included in
+licenses/SkeeveAN-MIT.txt. Game names remain NCSOFT game content; the upstream
+software license does not grant ownership of those names. Only names associated
+with this project's existing identifiers are imported; no capture, spawn,
+progression or acquisition rules are imported from those tables.

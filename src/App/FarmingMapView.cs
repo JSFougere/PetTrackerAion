@@ -80,10 +80,11 @@ public sealed class FarmingMapView : Grid
         SizeChanged += (_, _) => RefreshLayout();
     }
 
-    public void ShowPet(PetSearchResult? selected, string preferredRegion)
+    public void ShowPet(PetSearchResult? selected, string preferredRegion, string language = "en")
     {
         pet = selected;
-        title.Text = selected?.Label ?? "No pet selected";
+        map.NameLanguage = language;
+        title.Text = selected == null ? "No pet selected" : LocalizedNames.Pet(selected.Pet.Id, selected.Label, language);
         title.ToolTip = title.Text;
         string key = selected?.Pet.Id + ":" + preferredRegion;
         if (context == key)

@@ -11,7 +11,11 @@ public sealed class PetTrackerOverlay : Window
 {
     readonly Host host;
     readonly Border shell;
+    readonly OverlayResizeHandles resizeHandles;
+    public bool IsResizing => resizeHandles.IsResizing;
+    public void SetResizeEnabled(bool enabled) => resizeHandles.SetEnabled(enabled);
     readonly PetNames names;
+    string PetName(PetProgress pet) => LocalizedNames.Pet(pet.Id, names.Resolve(pet), host.PetOverlayPreferences.NameLanguage);
     readonly PetPortraits portraits;
     readonly StackPanel rows = new();
     readonly StackPanel merchantRows = new();
@@ -86,8 +90,13 @@ public sealed class PetTrackerOverlay : Window
             }
         };
         var layout = new StackPanel();
-        shell.Child = layout;
-        Content = shell;
+        System.Windows.Automation.AutomationProperties.SetAutomationId(shell, "TrackerShell");
+        shell.Child = new ScrollViewer { Content = layout, VerticalScrollBarVisibility = ScrollBarVisibility.Auto, HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled };
+        var root = new Grid();
+        root.Children.Add(shell);
+        Content = root;
+        resizeHandles = new(host, this, root);
+        SetResizeEnabled(!host.PetOverlayPreferences.Locked && !host.PetOverlayPreferences.ClickThrough);
         var header = new DockPanel { Height = 32, LastChildFill = true, Cursor = Cursors.SizeAll };
         var controls = new StackPanel { Orientation = Orientation.Horizontal, VerticalAlignment = VerticalAlignment.Center };
         DockPanel.SetDock(controls, Dock.Right);
@@ -250,7 +259,7 @@ public sealed class PetTrackerOverlay : Window
         };
         SizeChanged += (s, e) =>
         {
-            if (IsVisible && !dragging)
+            if (IsVisible && !dragging && !IsResizing)
                 ConstrainToDesktop();
         };
         directionTimer.Tick += (s, e) => RefreshDirections(now());
@@ -326,7 +335,7 @@ public sealed class PetTrackerOverlay : Window
                 row.Picture.Width = row.Picture.Height = settings.Compact ? 36 : 48;
                 ((Grid)row.Button.Content).ColumnDefinitions[0].Width = new GridLength(settings.Portraits ? settings.Compact ? 36 : 48 : 0);
                 row.Picture.Source = portraits.Get(pet.Id);
-                row.Name.Text = names.Resolve(pet);
+                row.Name.Text = PetName(pet);
                 row.Name.Foreground = (Brush)FindResource(pet.Max ? "ArcanaTextDim" : "ArcanaTextNeutral");
                 row.Rank.Text = pet.Level == 0 ? "Unranked" : "Rank " + (pet.Level?.ToString() ?? "?");
                 row.Progress.Text = pet.Max ? "\u2713 MAX" : (pet.CurrentSouls?.ToString() ?? "?") + " / " + (pet.Goal?.ToString() ?? "?");
@@ -357,7 +366,7 @@ public sealed class PetTrackerOverlay : Window
                     {
                         MaxWidth = 260,
                         TextWrapping = TextWrapping.Wrap,
-                        Text = (activity.CreatureName.Length > 0 ? (activity.IsNearby ? "Observed mobs: " : "Last creature: ") + activity.CreatureName + "\n" : "") + pet.LevelSourceDescription + "\n" + TrackingGuidance.Remaining(pet) + "\n" + (pet.ProgressNeedsSync && !pet.Max ? "Last known soul total. See Settings → Help." : pet.EstimatedSouls.HasValue ? "Soul progress is estimated." : "")
+                        Text = (activity.CreatureName.Length > 0 ? (activity.IsNearby ? "Observed mobs: " : "Last creature: ") + LocalizedNames.Monster(activity.CreatureName, settings.NameLanguage) + "\n" : "") + pet.LevelSourceDescription + "\n" + TrackingGuidance.Remaining(pet) + "\n" + (pet.ProgressNeedsSync && !pet.Max ? "Last known soul total. See Settings → Help." : pet.EstimatedSouls.HasValue ? "Soul progress is estimated." : "")
                     }
                 };
                 ApplyLifetime(row, settings, time);
@@ -396,7 +405,7 @@ public sealed class PetTrackerOverlay : Window
         string key = string.Join("|", offers.Select(r =>
         {
             var p = host.View!.Profile.Pets[r.Offer.PetId];
-            return $"{r.Offer.PetId}:{r.Offer.Price}:{r.Stock.Tab}:{r.Updated}:{p.Level}:{p.ProgressText}:{names.Resolve(p)}";
+            return $"{r.Offer.PetId}:{r.Offer.Price}:{r.Stock.Tab}:{r.Updated}:{p.Level}:{p.ProgressText}:{PetName(p)}";
         })) + $"/{host.PetOverlayPreferences.Portraits}";
         if (key == merchantKey)
             return;
@@ -414,7 +423,7 @@ public sealed class PetTrackerOverlay : Window
             var text = new StackPanel();
             Grid.SetColumn(text, 1);
             grid.Children.Add(text);
-            text.Children.Add(new TextBlock { Text = names.Resolve(pet), Foreground = Ui.Ink, FontSize = 12, FontWeight = FontWeights.SemiBold, TextWrapping = TextWrapping.Wrap });
+            text.Children.Add(new TextBlock { Text = PetName(pet), Foreground = Ui.Ink, FontSize = 12, FontWeight = FontWeights.SemiBold, TextWrapping = TextWrapping.Wrap });
             var progressLine = new WrapPanel { Margin = new Thickness(0, 3, 0, 0) };
             progressLine.Children.Add(new TextBlock { Text = $"{(pet.Level == 0 ? "Unranked" : "Rank " + pet.Level)} · {pet.ProgressText}{(pet.Max ? "" : " souls")}", Foreground = Ui.Ink, FontSize = 11, VerticalAlignment = VerticalAlignment.Center });
             progressLine.Children.Add(new PetFamilyBadge(id));

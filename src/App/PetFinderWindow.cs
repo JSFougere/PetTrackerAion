@@ -51,7 +51,8 @@ public sealed class PetFinderWindow : Window
     {
         public PetSearchResult Result { get; } = result;
         public ImageSource? Portrait { get; } = portrait;
-        public string Label => Result.Label;
+        string language = "en";
+        public string Label => LocalizedNames.Pet(Result.Pet.Id, Result.Label, language);
         public string Rank { get; private set; } = "Rank ?";
         public string Progress { get; private set; } = "? / ?";
         public string Hint { get; private set; } = "";
@@ -62,8 +63,9 @@ public sealed class PetFinderWindow : Window
         public string FarmingGoal { get; private set; } = "No farming goal";
 
         public event PropertyChangedEventHandler? PropertyChanged;
-        public void Update(Profile profile, bool collectionSynced)
+        public void Update(Profile profile, bool collectionSynced, string nameLanguage = "en")
         {
+            language = nameLanguage;
             profile.Pets.TryGetValue(Result.Pet.Id, out var pet);
             string rank = pet?.Level is int level ? (level == 0 ? "Unranked" : "Rank " + level) : "Rank ?";
             string progress = pet?.Max == true ? "\u2713 MAX" : pet?.ProgressText.Replace("/", " / ") ?? "? / ?";
@@ -481,7 +483,7 @@ public sealed class PetFinderWindow : Window
         int? selected = (results.SelectedItem as SearchRow)?.Result.Pet.Id;
         var matches = Matches().Select(p => new SearchRow(p, portraits.Get(p.Pet.Id))).ToArray();
         foreach (var row in matches)
-            row.Update(host.Tracker.Profile, host.View?.CollectionSynced == true);
+            row.Update(host.Tracker.Profile, host.View?.CollectionSynced == true, host.PetOverlayPreferences.NameLanguage);
         detailRendered = false;
         results.ItemsSource = matches;
         count.Text = matches.Length == 1 ? "1 pet" : $"{matches.Length} pets";
@@ -515,7 +517,7 @@ public sealed class PetFinderWindow : Window
     void RefreshMap()
     {
         if (views.SelectedItem == mapTab)
-            mapView.ShowPet((results.SelectedItem as SearchRow)?.Result, regionFilter.SelectedIndex == 0 ? "" : (string)regionFilter.SelectedItem);
+            mapView.ShowPet((results.SelectedItem as SearchRow)?.Result, regionFilter.SelectedIndex == 0 ? "" : (string)regionFilter.SelectedItem, host.PetOverlayPreferences.NameLanguage);
     }
 
     void Refresh()
@@ -530,7 +532,7 @@ public sealed class PetFinderWindow : Window
         }
 
         foreach (var row in results.Items.Cast<SearchRow>())
-            row.Update(host.Tracker.Profile, host.View?.CollectionSynced == true);
+            row.Update(host.Tracker.Profile, host.View?.CollectionSynced == true, host.PetOverlayPreferences.NameLanguage);
         RefreshDetail();
     }
 
@@ -538,7 +540,7 @@ public sealed class PetFinderWindow : Window
     {
         int? selectedId = (results.SelectedItem as SearchRow)?.Result.Pet.Id;
         RefreshMap();
-        string pinKey = host.PetOverlayPreferences.PinLimit + ":" + string.Join(",", host.PetOverlayPreferences.Pins());
+        string pinKey = host.PetOverlayPreferences.NameLanguage + ":" + host.PetOverlayPreferences.PinLimit + ":" + string.Join(",", host.PetOverlayPreferences.Pins());
         var today = DateOnly.FromDateTime(DateTime.Now);
         string marketKey = string.Join(";", Offers().Where(o => o.Offer.PetId == selectedId).Select(o => $"{o.Stock.Tab}:{o.Stock.SeenUtc:O}:{o.Offer.Price}"));
         string goalKey = (selectedId is int goalId ? host.Tracker.Profile.Pets.GetValueOrDefault(goalId)?.TargetRank?.ToString() : "") + ":" + host.Tracker.Ready;
@@ -583,7 +585,7 @@ public sealed class PetFinderWindow : Window
         DockPanel.SetDock(portraitWell, Dock.Left);
         heading.Children.Add(portraitWell);
         var identity = new StackPanel { VerticalAlignment = VerticalAlignment.Center };
-        identity.Children.Add(new TextBlock { Text = selected.Pet.Name, FontSize = 21, FontWeight = FontWeights.SemiBold, TextWrapping = TextWrapping.Wrap });
+        identity.Children.Add(new TextBlock { Text = LocalizedNames.Pet(id, selected.Pet.Name, host.PetOverlayPreferences.NameLanguage), FontSize = 21, FontWeight = FontWeights.SemiBold, TextWrapping = TextWrapping.Wrap });
         identity.Children.Add(new PetFamilyBadge(id) { Margin = new Thickness(0, 8, 0, 0) });
         heading.Children.Add(identity);
         detail.Children.Add(heading);
@@ -708,7 +710,7 @@ public sealed class PetFinderWindow : Window
                 button.HorizontalAlignment = HorizontalAlignment.Left;
                 button.Margin = new Thickness(0, 0, 0, 8);
                 location.Children.Add(button);
-                var mobs = selected.Location?.SoulSources?.Where(s => s.Region == map.Region).Select(s => s.Name).Distinct().OrderBy(n => n).ToArray();
+                var mobs = selected.Location?.SoulSources?.Where(s => s.Region == map.Region).Select(s => LocalizedNames.Monster(s.NpcId, s.Name, host.PetOverlayPreferences.NameLanguage)).Distinct().OrderBy(n => n).ToArray();
                 if (mobs is { Length: > 0 })
                 {
                     shownRegions.Add(map.Region);
@@ -727,13 +729,13 @@ public sealed class PetFinderWindow : Window
             foreach (var group in sources.Where(s => !shownRegions.Contains(s.Region)).GroupBy(s => s.Region).OrderBy(g => g.Key))
             {
                 Section(group.Key);
-                Paragraph(string.Join("\n", group.Select(s => s.Name).Distinct().OrderBy(n => n)));
+                Paragraph(string.Join("\n", group.Select(s => LocalizedNames.Monster(s.NpcId, s.Name, host.PetOverlayPreferences.NameLanguage)).Distinct().OrderBy(n => n)));
             }
         }
         else if (selected.Creatures.Count > 0)
         {
             Section("Soul drops");
-            Paragraph(string.Join("\n", selected.Creatures));
+            Paragraph(string.Join("\n", selected.Creatures.Select(name => LocalizedNames.Monster(name, host.PetOverlayPreferences.NameLanguage))));
         }
 
         if (selected.AvailableMaps.Count > 0)

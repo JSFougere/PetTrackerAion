@@ -92,7 +92,15 @@ public static class UiChecks
         SyncNoticeChecks.Run(Check, folder, view, Pump, ShowOffscreen);
         host.Preview(view);
         var overlay = host.Overlay!;
+        if (args.Contains("--interactions-only"))
+        {
+            OverlayInteractionChecks.Run(Check, folder, view, Pump, ShowOffscreen);
+            Console.WriteLine($"PASS: {passed} interaction checks");
+            app.Shutdown();
+            return;
+        }
         CatalogChecks.Run(Check, host, folder);
+        OverlayInteractionChecks.Run(Check, folder, view, Pump, ShowOffscreen);
         Check(!overlay.IsVisible, "Render preview never opens a sample tracker window");
         ShowOffscreen(overlay);
         Pump(50);
@@ -993,7 +1001,7 @@ public static class UiChecks
         var alpha = Children(condensed).OfType<Slider>().Last();
         alpha.Value = .4;
         Pump(350);
-        Check(overlay.Opacity == 1 && Math.Abs(((Border)overlay.Content).Background.Opacity - .4) < .001, "Transparency affects background without fading pet text and portraits");
+        Check(overlay.Opacity == 1 && Math.Abs(Children(overlay).OfType<Border>().Single(b => System.Windows.Automation.AutomationProperties.GetAutomationId(b) == "TrackerShell").Background.Opacity - .4) < .001, "Transparency affects background without fading pet text and portraits");
         condensed.ShowSection("Overlay");
         Children(condensed).OfType<Expander>().Single(e => Equals(e.Header, "More overlay options")).IsExpanded = true;
         Pump(30);

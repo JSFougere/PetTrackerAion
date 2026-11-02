@@ -56,7 +56,7 @@ public sealed class FarmingSessionWindow : Window
         timing.Text = session?.StartedUtc is { } start ? $"{Math.Max(0, (int)(DateTimeOffset.UtcNow - start).TotalMinutes)} min since first soul reward" : "Your next soul reward starts the session.";
         notice.Text = session?.Incomplete == true ? "Some rewards may be missing because capture was interrupted. These are the rewards received by the tracker." : "Counts soul rewards received while connected. Kills and login totals are not counted as rewards.";
         reset.IsEnabled = session?.StartedUtc != null;
-        string key = host.View?.Selected + ":" + session?.StartedUtc + ":" + string.Join(";", session?.Pets.Select(p => $"{p.PetId}:{p.Souls}:{p.RankUps}:{host.Tracker.Profile.Pets.GetValueOrDefault(p.PetId)?.Name}") ?? Array.Empty<string>());
+        string key = host.PetOverlayPreferences.NameLanguage + ":" + host.View?.Selected + ":" + session?.StartedUtc + ":" + string.Join(";", session?.Pets.Select(p => $"{p.PetId}:{p.Souls}:{p.RankUps}:{host.Tracker.Profile.Pets.GetValueOrDefault(p.PetId)?.Name}") ?? Array.Empty<string>());
         if (rendered == key && rows.Children.Count > 0)
             return;
         rendered = key;
@@ -72,7 +72,7 @@ public sealed class FarmingSessionWindow : Window
             total.VerticalAlignment = VerticalAlignment.Center;
             DockPanel.SetDock(total, Dock.Right);
             line.Children.Add(total);
-            var name = host.Tracker.Profile.Pets.TryGetValue(row.PetId, out var pet) ? new PetNames().Resolve(pet) : "Pet " + row.PetId;
+            var name = host.Tracker.Profile.Pets.TryGetValue(row.PetId, out var pet) ? LocalizedNames.Pet(row.PetId, new PetNames().Resolve(pet), host.PetOverlayPreferences.NameLanguage) : "Pet " + row.PetId;
             var label = new StackPanel { VerticalAlignment = VerticalAlignment.Center };
             label.Children.Add(Ui.Text(name, 13));
             if (row.RankUps > 0)
