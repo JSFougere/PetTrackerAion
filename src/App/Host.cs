@@ -407,6 +407,12 @@ public sealed class Host : IDisposable
         settings!.ShowConnection();
     }
 
+    public void OpenPetCatalog()
+    {
+        OpenPetOverlaySettings();
+        settings!.ShowSection("Catalogue");
+    }
+
     public void OpenAccounts()
     {
         if (accounts == null)

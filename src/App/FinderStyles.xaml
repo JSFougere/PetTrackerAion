@@ -26,8 +26,8 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True"><Setter TargetName="tab" Property="Background" Value="#182632"/></Trigger>
                         <Trigger Property="IsSelected" Value="True">
-                            <Setter TargetName="label" Property="TextElement.Foreground" Value="#9CDEEC"/>
-                            <Setter TargetName="tab" Property="BorderBrush" Value="#61C5DF"/>
+                            <Setter TargetName="label" Property="TextElement.Foreground" Value="{DynamicResource ArcanaGold}"/>
+                            <Setter TargetName="tab" Property="BorderBrush" Value="{DynamicResource ArcanaGold}"/>
                         </Trigger>
                         <Trigger Property="IsKeyboardFocused" Value="True"><Setter TargetName="tab" Property="Background" Value="#204550"/></Trigger>
                     </ControlTemplate.Triggers>
@@ -48,7 +48,7 @@
                         <Trigger Property="IsMouseOver" Value="True"><Setter TargetName="card" Property="Background" Value="#182632"/></Trigger>
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="card" Property="Background" Value="#122C36"/>
-                            <Setter TargetName="card" Property="BorderBrush" Value="#419FB5"/>
+                            <Setter TargetName="card" Property="BorderBrush" Value="{DynamicResource ArcanaGold}"/>
                         </Trigger>
                         <Trigger Property="IsKeyboardFocused" Value="True"><Setter TargetName="card" Property="BorderBrush" Value="#80D7EA"/></Trigger>
                     </ControlTemplate.Triggers>
@@ -77,7 +77,7 @@
                         <Trigger Property="IsSelected" Value="True">
                             <Setter TargetName="card" Property="Background" Value="#122C36"/>
                             <Setter TargetName="card" Property="BorderBrush" Value="#386879"/>
-                            <Setter TargetName="marker" Property="Background" Value="#61C5DF"/>
+                            <Setter TargetName="marker" Property="Background" Value="{DynamicResource ArcanaGold}"/>
                         </Trigger>
                         <Trigger Property="IsKeyboardFocusWithin" Value="True">
                             <Setter TargetName="card" Property="BorderBrush" Value="#80D7EA"/>
@@ -89,7 +89,7 @@
     </Style>
     <Style x:Key="FinderProgress" TargetType="ProgressBar">
         <Setter Property="Height" Value="4"/>
-        <Setter Property="Foreground" Value="#61C5DF"/>
+        <Setter Property="Foreground" Value="{DynamicResource ArcanaGold}"/>
         <Setter Property="Background" Value="#26313E"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -103,7 +103,7 @@
         </Setter>
     </Style>
     <Style x:Key="FinderPin" TargetType="Button">
-        <Setter Property="Foreground" Value="#9CDEEC"/>
+        <Setter Property="Foreground" Value="{DynamicResource ArcanaGold}"/>
         <Setter Property="Background" Value="#16303A"/>
         <Setter Property="BorderBrush" Value="#3F7C8B"/>
         <Setter Property="Cursor" Value="Hand"/>
@@ -118,7 +118,7 @@
                             <Setter TargetName="button" Property="Background" Value="#204550"/>
                         </Trigger>
                         <Trigger Property="IsKeyboardFocused" Value="True">
-                            <Setter TargetName="button" Property="BorderBrush" Value="#9CDEEC"/>
+                            <Setter TargetName="button" Property="BorderBrush" Value="{DynamicResource ArcanaGold}"/>
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="Opacity" Value="0.45"/>

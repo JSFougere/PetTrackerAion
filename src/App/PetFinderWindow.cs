@@ -92,7 +92,7 @@ public sealed class PetFinderWindow : Window
         this.host = host;
         mapView = new(Open);
         portraits = new(host.AssetRoot);
-        Title = "Pet Tracker — Find a pet";
+        Title = "PetTracker Aion — Collection";
         Width = 1100;
         Height = 780;
         MinWidth = 720;
@@ -104,13 +104,38 @@ public sealed class PetFinderWindow : Window
         Resources[SystemParameters.VerticalScrollBarWidthKey] = 10.0;
         var layout = new DockPanel { Margin = new Thickness(22) };
         Content = layout;
+        var navigation = new StackPanel { Width = 140, Margin = new Thickness(0, 0, 22, 0) };
+        DockPanel.SetDock(navigation, Dock.Left);
+        layout.Children.Add(navigation);
+        var brand = Ui.Text("PETTRACKER\nAION", 17, NativeTheme.Accent(host.PetOverlayPreferences.Accent));
+        brand.FontWeight = FontWeights.SemiBold;
+        brand.Margin = new Thickness(0, 0, 0, 28);
+        navigation.Children.Add(brand);
+        foreach (var item in new (string Label, Action Open)[]
+        {
+            ("Collection", () => search.Focus()),
+            ("Catalogue & régions", host.OpenPetCatalog),
+            ("Session", host.OpenFarmingSession),
+            ("Comptes", host.OpenAccounts),
+            ("Réglages", host.OpenPetOverlaySettings)
+        })
+        {
+            var button = Ui.Button(item.Label, item.Open);
+            button.HorizontalContentAlignment = HorizontalAlignment.Left;
+            button.Margin = new Thickness(0, 0, 0, 10);
+            button.Content = Ui.Text(item.Label, 12);
+            navigation.Children.Add(button);
+        }
+        SizeChanged += (_, _) => navigation.Visibility = ActualWidth >= 1050 ? Visibility.Visible : Visibility.Collapsed;
         var header = new StackPanel();
         DockPanel.SetDock(header, Dock.Top);
         layout.Children.Add(header);
-        var title = Ui.Text("Find a pet", 24);
+        var title = Ui.Text("Collection", 24);
         title.FontWeight = FontWeights.SemiBold;
         var titleRow = new DockPanel();
         var windows = new StackPanel { Orientation = Orientation.Horizontal };
+        windows.Children.Add(Ui.Button("Catalogue", host.OpenPetCatalog));
+        windows.Children.Add(Ui.Button("Réglages", host.OpenPetOverlaySettings));
         var savedPopup = new Popup { StaysOpen = false, Placement = PlacementMode.Bottom, AllowsTransparency = true };
         System.Windows.Automation.AutomationProperties.SetAutomationId(savedPopup, "SavedFiltersPopup");
         var savedButton = Ui.Button("Saved filters", () => savedPopup.IsOpen = true);

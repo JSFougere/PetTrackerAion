@@ -12,7 +12,7 @@ namespace PetTracker;
 
 public static class Ui
 {
-    public static Brush Ink = new SolidColorBrush(Color.FromRgb(223, 230, 239)), Muted = new SolidColorBrush(Color.FromRgb(145, 155, 171)), Dark = new SolidColorBrush(Color.FromRgb(11, 16, 23));
+    public static Brush Ink = new SolidColorBrush(Color.FromRgb(223, 230, 239)), Muted = new SolidColorBrush(Color.FromRgb(167, 179, 196)), Dark = new SolidColorBrush(Color.FromRgb(11, 16, 23));
     public static TextBlock Text(string value, double size = 13, Brush? brush = null) => new() { Text = value, FontSize = size, Foreground = brush ?? Ink, TextWrapping = TextWrapping.Wrap };
     public static Button Button(string text, Action click)
     {

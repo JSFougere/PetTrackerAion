@@ -165,6 +165,24 @@ public sealed class PetTrackerOverlay : Window
                 }
         };
         layout.Children.Add(new Border { BorderBrush = new SolidColorBrush(Color.FromRgb(41, 47, 56)), BorderThickness = new Thickness(0, 0, 0, 1), Child = header });
+        var navigation = new WrapPanel { Margin = new Thickness(0, 8, 0, 4) };
+        foreach (var item in new (string Label, string Id, Action Open)[]
+        {
+            ("Collection", "OverlayCollection", () => host.OpenPetFinder()),
+            ("Catalogue", "OverlayCatalog", host.OpenPetCatalog),
+            ("Réglages", "OverlaySettings", host.OpenPetOverlaySettings),
+            ("Session", "OverlaySession", host.OpenFarmingSession),
+            ("Comptes", "OverlayAccounts", host.OpenAccounts)
+        })
+        {
+            var button = Ui.Button(item.Label, item.Open);
+            button.Padding = new Thickness(8, 5, 8, 5);
+            button.FontSize = 11;
+            button.Margin = new Thickness(0, 0, 4, 4);
+            System.Windows.Automation.AutomationProperties.SetAutomationId(button, item.Id);
+            navigation.Children.Add(button);
+        }
+        layout.Children.Add(navigation);
         var modeBar = new StackPanel { Orientation = Orientation.Horizontal, Margin = new Thickness(0, 6, 0, 2) };
         foreach (string mode in new[] { "Recent", "Nearby" })
         {

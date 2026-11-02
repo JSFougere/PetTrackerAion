@@ -92,6 +92,7 @@ public static class UiChecks
         SyncNoticeChecks.Run(Check, folder, view, Pump, ShowOffscreen);
         host.Preview(view);
         var overlay = host.Overlay!;
+        CatalogChecks.Run(Check, host, folder);
         Check(!overlay.IsVisible, "Render preview never opens a sample tracker window");
         ShowOffscreen(overlay);
         Pump(50);
@@ -642,8 +643,8 @@ public static class UiChecks
         host.Preview(marketView);
         marketFilter.SelectedIndex = 2;
         Pump(30);
-        Check(finderList.Items.Count == 1 && Children(finder).OfType<TextBlock>().Any(t => t.Text.Contains("80,000 Kina")), "Recent market view renders the captured price and matching collection rank");
-        Check(overlay.DisplayedMerchantCount == 1 && Children(overlay).OfType<TextBlock>().Any(t => t.Text.Contains("80,000 Kina")), "Overlay shows the needed merchant pet and observed price");
+        Check(finderList.Items.Count == 1 && Children(finder).OfType<TextBlock>().Any(t => t.Text.Contains($"{80000:N0} Kina")), "Recent market view renders the captured price and matching collection rank");
+        Check(overlay.DisplayedMerchantCount == 1 && Children(overlay).OfType<TextBlock>().Any(t => t.Text.Contains($"{80000:N0} Kina")), "Overlay shows the needed merchant pet and observed price");
         Check(!Children(overlay).OfType<TextBlock>().Any(t => t.Text == "Souls received"), "Unbought merchant offers have no completion badge");
         Program.Save(overlay, Path.Combine(folder, "merchant-overlay.png"), 340, 360);
         var merchantGrid = Children(overlay).OfType<Grid>().Single(g => System.Windows.Automation.AutomationProperties.GetAutomationId(g) == "MerchantPet-1196");

@@ -34,8 +34,8 @@ public sealed class SettingsWindow : Window
     public SettingsWindow(Host host)
     {
         this.host = host;
-        Title = "Pet Tracker — Settings";
-        Width = 820;
+        Title = "PetTracker Aion — Settings";
+        Width = 1060;
         Height = 740;
         MinWidth = 720;
         MinHeight = 560;
@@ -172,6 +172,8 @@ public sealed class SettingsWindow : Window
             return panel;
         }
 
+        var catalog = Page("Catalogue");
+        catalog.Children.Add(new PetCatalogView(host));
         var tracker = Page("Tracking");
         var pets = Group(tracker, "Pet list");
         Choice(pets, "Tracker mode", new[] { "Recent", "Nearby" }, host.PetOverlayPreferences.TrackerMode, v => Queue(nameof(AppSettings.TrackerMode), v), "Overlay view");
@@ -694,9 +696,9 @@ public sealed class SettingsWindow : Window
         foreach (var button in navigation)
         {
             bool active = button.Key == name;
-            button.Value.Background = active ? new SolidColorBrush(Color.FromRgb(18, 44, 54)) : Brushes.Transparent;
-            button.Value.BorderBrush = active ? new SolidColorBrush(Color.FromRgb(65, 159, 181)) : Brushes.Transparent;
-            button.Value.Foreground = active ? new SolidColorBrush(Color.FromRgb(156, 222, 236)) : Ui.Muted;
+            button.Value.Background = active ? new SolidColorBrush(Color.FromRgb(40, 37, 29)) : Brushes.Transparent;
+            button.Value.BorderBrush = active ? NativeTheme.Accent(host.PetOverlayPreferences.Accent) : Brushes.Transparent;
+            button.Value.Foreground = active ? NativeTheme.Accent(host.PetOverlayPreferences.Accent) : Ui.Muted;
             button.Value.FontWeight = active ? FontWeights.SemiBold : FontWeights.Normal;
         }
         reset!.Visibility = name is "Tracking" or "Overlay" ? Visibility.Visible : Visibility.Collapsed;
