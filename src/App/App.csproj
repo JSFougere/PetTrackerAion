@@ -8,7 +8,7 @@
     <ImplicitUsings>disable</ImplicitUsings>
     <AssemblyName>PetTracker</AssemblyName>
     <Company>Pet Tracker</Company>
-    <Product>Pet Tracker</Product>
+    <Product>PetTracker Aion</Product>
     <ApplicationIcon>../../assets/PetTracker.ico</ApplicationIcon>
     <StartupObject>PetTracker.Program</StartupObject>
     <DebugType>none</DebugType>

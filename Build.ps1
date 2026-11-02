@@ -13,11 +13,15 @@ $buildRoot = Join-Path $productRoot 'build'
 $runtime = Join-Path $buildRoot ('runtime-' + [guid]::NewGuid().ToString('N'))
 $worker = Join-Path $buildRoot ('capture-' + [guid]::NewGuid().ToString('N'))
 $release = Join-Path $productRoot 'release'
+$setupOutput = Join-Path $release "PetTrackerAion-$version-Setup.exe"
+$portableOutput = Join-Path $release "PetTrackerAion-$version-win-x64.zip"
 New-Item -ItemType Directory -Force $buildRoot, $release | Out-Null
 $restoreArgs = @(); if ($Feed) { $restoreArgs = @('--source', $Feed) }
 $publisherArgs = @('-p:UpdatePublisherFile=')
 if ($UpdatePublisherFile) {
     $UpdatePublisherFile = (Resolve-Path -LiteralPath $UpdatePublisherFile).Path
+    $publisherConfig = Get-Content -LiteralPath $UpdatePublisherFile -Raw | ConvertFrom-Json
+    if ($publisherConfig.FeedRoot -like 'https://github.com/0Fox2Give/PetTracker/*') { throw 'Fork builds must not embed the original publisher configuration.' }
     & $Dotnet build (Join-Path $productRoot 'tools/ReleaseTools/ReleaseTools.csproj') -c Release @restoreArgs --nologo -v quiet -p:UseSharedCompilation=false -m:1
     if ($LASTEXITCODE -ne 0) { throw 'Publisher tools build failed' }
     & $Dotnet (Join-Path $productRoot 'tools/ReleaseTools/bin/Release/net10.0/ReleaseTools.dll') validate-config $UpdatePublisherFile
@@ -51,9 +55,9 @@ $payload = Join-Path $buildRoot 'payload.zip'; if (Test-Path -LiteralPath $paylo
 [IO.File]::WriteAllText((Join-Path $buildRoot 'payload.sha256'), (Get-FileHash -LiteralPath $payload -Algorithm SHA256).Hash)
 & $Dotnet publish (Join-Path $productRoot 'src/Setup/Setup.csproj') -c Release -r win-x64 --self-contained true -o (Join-Path $buildRoot 'setup') @restoreArgs --nologo -v quiet -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:UseSharedCompilation=false -m:1
 if ($LASTEXITCODE -ne 0) { throw 'Installer build failed' }
-if (-not $UpdatePublisherFile) { Copy-Item -LiteralPath (Join-Path $buildRoot 'setup/PetTrackerSetup.exe') -Destination (Join-Path $release 'PetTrackerSetup.exe') -Force }
-Copy-Item -LiteralPath $payload -Destination (Join-Path $release "PetTracker-$version-win-x64.zip") -Force
+if (-not $UpdatePublisherFile) { Copy-Item -LiteralPath (Join-Path $buildRoot 'setup/PetTrackerSetup.exe') -Destination $setupOutput -Force }
+Copy-Item -LiteralPath $payload -Destination $portableOutput -Force
 Copy-Item -LiteralPath (Join-Path $productRoot 'docs/INSTALL.txt') -Destination (Join-Path $release 'Player Guide.txt') -Force
-$result = [ordered]@{Version = "$version-beta"; RuntimeVersion = $runtimeVersion; Files = $hashes.Count; Portraits = (Get-ChildItem -LiteralPath (Join-Path $runtime 'portraits') -File).Count; AionFlexRequired = $false; SignInRequired = $false; SelfContained = $true; InstallerSigned = $false; NpcapBundled = $false; UpdateUiIntegrated = $true; PublisherConfigured = [bool]$UpdatePublisherFile; Runtime = $runtime; SetupSHA256 = if ($UpdatePublisherFile) { $null }else { (Get-FileHash -LiteralPath (Join-Path $release 'PetTrackerSetup.exe')).Hash }; PortableSHA256 = (Get-FileHash -LiteralPath (Join-Path $release "PetTracker-$version-win-x64.zip")).Hash }
+$result = [ordered]@{Version = $version; RuntimeVersion = $runtimeVersion; Files = $hashes.Count; Portraits = (Get-ChildItem -LiteralPath (Join-Path $runtime 'portraits') -File).Count; AionFlexRequired = $false; SignInRequired = $false; SelfContained = $true; InstallerSigned = $false; NpcapBundled = $false; UpdateUiIntegrated = $true; PublisherConfigured = [bool]$UpdatePublisherFile; Runtime = $runtime; Setup = if ($UpdatePublisherFile) { $null } else { $setupOutput }; Portable = $portableOutput; SetupSHA256 = if ($UpdatePublisherFile) { $null }else { (Get-FileHash -LiteralPath $setupOutput).Hash }; PortableSHA256 = (Get-FileHash -LiteralPath $portableOutput).Hash }
 [IO.File]::WriteAllText((Join-Path $productRoot 'package-verification.json'), (ConvertTo-Json -InputObject $result -Depth 3))
 $result

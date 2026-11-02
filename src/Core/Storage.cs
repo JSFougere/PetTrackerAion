@@ -9,7 +9,7 @@ public static class Storage
     public static string Root(string[] args)
     {
         int i = Array.IndexOf(args, "--data");
-        return i >= 0 && i + 1 < args.Length ? Path.GetFullPath(args[i + 1]) : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "PetTracker");
+        return i >= 0 && i + 1 < args.Length ? Path.GetFullPath(args[i + 1]) : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), ProductIdentity.DataDirectoryName);
     }
 
     public static string Pipe(string root)

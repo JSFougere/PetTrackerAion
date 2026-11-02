@@ -13,7 +13,7 @@ namespace PetTracker.Setup;
 
 public static class Installer
 {
-    public static string DefaultLocation => Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Programs", "PetTracker");
+    public static string DefaultLocation => Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Programs", ProductIdentity.DataDirectoryName);
 
     static string Resolve(string root, string name)
     {
@@ -137,14 +137,14 @@ public static class Installer
             System.Runtime.InteropServices.Marshal.FinalReleaseComObject(link);
         }
 
-        Link(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Programs), "Pet Tracker.lnk"));
+        Link(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Programs), ProductIdentity.ShortcutName));
         if (desktop)
-            Link(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), "Pet Tracker.lnk"));
+            Link(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), ProductIdentity.ShortcutName));
         System.Runtime.InteropServices.Marshal.FinalReleaseComObject(shell);
-        using var key = Registry.CurrentUser.CreateSubKey(@"Software\Microsoft\Windows\CurrentVersion\Uninstall\PetTracker");
-        key.SetValue("DisplayName", "Pet Tracker");
+        using var key = Registry.CurrentUser.CreateSubKey(ProductIdentity.UninstallRegistryKey);
+        key.SetValue("DisplayName", ProductIdentity.DisplayName);
         key.SetValue("DisplayVersion", Assembly.GetExecutingAssembly().GetName().Version!.ToString(3));
-        key.SetValue("Publisher", "Pet Tracker");
+        key.SetValue("Publisher", ProductIdentity.DisplayName);
         key.SetValue("InstallLocation", location);
         key.SetValue("DisplayIcon", Path.Combine(location, "PetTracker.exe"));
         key.SetValue("UninstallString", "\"" + Path.Combine(location, "Uninstall.exe") + "\" --uninstall");
@@ -161,14 +161,14 @@ public static class Installer
         string? remaining = UninstallPayload.Remove(location, files.Keys.Concat(new[] { "package.json", "Uninstall.exe" }));
         foreach (string link in new[]
         {
-            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Programs), "Pet Tracker.lnk"),
-            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), "Pet Tracker.lnk")
+            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Programs), ProductIdentity.ShortcutName),
+            Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), ProductIdentity.ShortcutName)
         })
             if (File.Exists(link))
                 File.Delete(link);
         using (var run = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run", true))
-            run?.DeleteValue("PetTracker", false);
-        Registry.CurrentUser.DeleteSubKeyTree(@"Software\Microsoft\Windows\CurrentVersion\Uninstall\PetTracker", false);
+            run?.DeleteValue(ProductIdentity.DataDirectoryName, false);
+        Registry.CurrentUser.DeleteSubKeyTree(ProductIdentity.UninstallRegistryKey, false);
         MessageBox.Show("Pet Tracker has been removed. Saved collections were kept." + (remaining == null ? "" : " Some program files could not be deleted and remain in " + remaining + "."), "Pet Tracker");
     }
 }
@@ -210,7 +210,7 @@ public static class Program
         app.Resources.MergedDictionaries.Add(new ResourceDictionary { Source = new Uri("/PetTrackerSetup;component/NativeTheme.xaml", UriKind.Relative) });
         var w = new Window
         {
-            Title = "Pet Tracker Setup",
+            Title = "PetTracker Aion 1.0 — Installation",
             Width = 520,
             Height = 470,
             ResizeMode = ResizeMode.NoResize,
@@ -221,7 +221,7 @@ public static class Program
         };
         var panel = new StackPanel { Margin = new Thickness(32) };
         w.Content = panel;
-        panel.Children.Add(new TextBlock { Text = "Pet Tracker", FontSize = 30, FontWeight = FontWeights.SemiBold });
+        panel.Children.Add(new TextBlock { Text = ProductIdentity.DisplayName, FontSize = 30, FontWeight = FontWeights.SemiBold });
         panel.Children.Add(new TextBlock { Text = "Your Aion 2 pet collection, at a glance.", FontSize = 14, Margin = new Thickness(0, 8, 0, 28) });
         panel.Children.Add(new TextBlock { Text = "Install for your Windows account. Your collections stay on this PC.", TextWrapping = TextWrapping.Wrap, Margin = new Thickness(0, 0, 0, 20) });
         var desktop = new CheckBox

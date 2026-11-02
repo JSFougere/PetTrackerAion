@@ -12,6 +12,7 @@
     <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="../Core/Core.csproj" />
     <EmbeddedResource Include="../../build/payload.zip" LogicalName="PetTracker.Payload.zip" Condition="Exists('../../build/payload.zip')" />
     <EmbeddedResource Include="../../build/payload.sha256" LogicalName="PetTracker.Payload.sha256" Condition="Exists('../../build/payload.sha256')" />
     <Page Include="../App/NativeTheme.xaml" Link="NativeTheme.xaml" />

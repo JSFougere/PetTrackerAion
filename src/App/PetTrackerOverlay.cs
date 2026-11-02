@@ -50,7 +50,7 @@ public sealed class PetTrackerOverlay : Window
         this.animate = animate;
         names = new();
         portraits = new(host.AssetRoot);
-        Title = "Pet Tracker";
+        Title = ProductIdentity.DisplayName;
         Width = 320;
         SizeToContent = SizeToContent.Height;
         WindowStyle = WindowStyle.None;
@@ -151,7 +151,7 @@ public sealed class PetTrackerOverlay : Window
 
         hideMax.Checked += Filter;
         hideMax.Unchecked += Filter;
-        header.Children.Add(new TextBlock { Text = "Pet Tracker", Foreground = new SolidColorBrush(Color.FromRgb(222, 229, 239)), FontSize = 13, FontWeight = FontWeights.SemiBold, VerticalAlignment = VerticalAlignment.Center });
+        header.Children.Add(new TextBlock { Text = ProductIdentity.DisplayName, Foreground = new SolidColorBrush(Color.FromRgb(222, 229, 239)), FontSize = 13, FontWeight = FontWeights.SemiBold, VerticalAlignment = VerticalAlignment.Center });
         header.MouseLeftButtonDown += (s, e) =>
         {
             if (e.OriginalSource is DependencyObject target && InsideControl(target))

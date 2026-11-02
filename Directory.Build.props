@@ -4,9 +4,9 @@
     <DebugSymbols>false</DebugSymbols>
     <Deterministic>true</Deterministic>
     <Company>Pet Tracker</Company>
-    <Product>Pet Tracker</Product>
+    <Product>PetTracker Aion</Product>
     <Authors>Pet Tracker</Authors>
-    <Version>0.1.59</Version>
+    <Version>1.0.0</Version>
     <RuntimeFrameworkVersion>10.0.12</RuntimeFrameworkVersion>
     <NuGetAudit>true</NuGetAudit>
     <NuGetAuditMode>all</NuGetAuditMode>

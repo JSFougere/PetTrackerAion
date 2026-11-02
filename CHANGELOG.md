@@ -1,5 +1,18 @@
 # Release notes
 
+## PetTracker Aion 1.0.0 — November 2, 2026
+
+- Add collection, catalogue, session, settings and account access from the overlay.
+- Add a searchable reference catalogue covering both factions' regions.
+- Search English and French pet/monster names without case or accent sensitivity.
+- Save the selected name language and resize the overlay from its edges/corners.
+- Temporarily hide the overlay while settings are visible; preserve existing close behavior.
+- Isolate installation, data, shortcuts and uninstallation from upstream PetTracker.
+- Ship an offline Windows installer with its own identity and no upstream update feed.
+- Review local history for secrets, audit dependencies and exclude local IDE artifacts.
+
+The following release notes describe the upstream project before this fork.
+
 ## 0.1.59 — October 26, 2026
 
 - Refine the Windows interface with clearer overlay icons, keyboard-focus

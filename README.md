@@ -1,3 +1,72 @@
+# PetTracker Aion — V1 Windows
+
+Fork indépendant de [PetTracker par 0Fox2Give](https://github.com/0Fox2Give/PetTracker),
+pour suivre les familiers AION 2 avec une collection, un catalogue des régions,
+des noms français/anglais et un overlay redimensionnable.
+
+## Installer et utiliser
+
+Les fichiers suivants sont générés localement par `Build.ps1` ; cette préparation
+ne les publie pas automatiquement dans les releases GitHub :
+
+- `release/PetTrackerAion-1.0.0-Setup.exe` : installateur Windows x64 autonome.
+- `release/PetTrackerAion-1.0.0-win-x64.zip` : version portable.
+- Un paquet de sources correspondantes accompagne la livraison locale.
+
+Quitter les autres copies depuis leur icône près de l'horloge avant de démarrer.
+Après installation, utiliser le raccourci **PetTracker Aion**. Dans la version
+portable, extraire tout le ZIP puis ouvrir **PetTracker.exe**. .NET est inclus.
+Npcap reste nécessaire au suivi en jeu et s'installe séparément depuis
+[son site officiel](https://npcap.com/#download).
+
+Lancer le tracker avant de connecter le personnage dans AION 2. Si le personnage
+est déjà en jeu, revenir à la sélection puis se reconnecter pour synchroniser
+la collection. L'application ne joue pas et n'achète pas à votre place.
+
+## Données et installation séparées
+
+- Données : `%LOCALAPPDATA%\PetTrackerAion`.
+- Installation : `%LOCALAPPDATA%\Programs\PetTrackerAion`.
+- Le dossier habituel `%LOCALAPPDATA%\PetTracker` et les dossiers des versions
+  de test restent conservés. Ils ne sont pas importés automatiquement.
+- Aucun compte web, clé API ou connexion GitHub n'est nécessaire pour utiliser
+  l'application. La V1 n'embarque aucun canal de mise à jour automatique.
+- La croix du petit tracker conserve son comportement de masquage. Utiliser
+  **Quit Pet Tracker** dans la zone de notification pour quitter l'application.
+
+## Fonctions du fork
+
+Collection, catalogue, réglages, session et comptes accessibles depuis l'overlay.
+Le catalogue cherche les familiers et les monstres des deux factions. La recherche
+accepte le français et l'anglais sans tenir compte des accents ou de la casse.
+Le choix de langue concerne les noms ; les libellés d'interface ne sont pas encore
+intégralement traduits. Les noms sans traduction gardent leur texte d'origine.
+
+Le tracker se masque temporairement pendant les réglages. Ses bords et coins
+permettent de changer sa taille en mode déverrouillé et interactif. Les fonctions
+existantes de capture, progression, épingles, marchand, cartes et session restent
+conservées. Voir [les détails de l'interface](docs/REFONTE-INTERFACE.md).
+
+## Sécurité, sources et compilation
+
+Lire la [politique de sécurité](SECURITY.md), les [instructions de compilation](docs/BUILDING.md),
+la [licence](LICENSE) et les [notices tierces](THIRD-PARTY-NOTICES.txt).
+Le code est sous GPL-3.0-only ; les droits sur les ressources du jeu sont distincts.
+Les exécutables ne sont pas signés avec un certificat Authenticode.
+L'application reste non officielle ; les tests hors ligne ne garantissent pas
+son fonctionnement en jeu ni une approbation par NCSOFT.
+
+```powershell
+./tools/Test.ps1
+./Build.ps1
+```
+
+Aucun push ni publication n'est effectué par ces commandes. Les workflows de
+publication hérités sont désactivés pour ce fork par une condition de dépôt.
+
+<details>
+<summary>Documentation du projet d'origine — liens et versions historiques</summary>
+
 # Pet Tracker
 
 A small overlay for **AION 2** that shows your pet ranks and how many souls you still need while you farm.
@@ -100,3 +169,5 @@ Use the installer above to run the app. **Code → Download ZIP** downloads sour
 | Build and test | [Developer instructions](docs/BUILDING.md) |
 | Update tools and repository structure | [Maintainer guide](docs/MAINTAINING.md) |
 | Component licenses | [Third-party notices](THIRD-PARTY-NOTICES.txt) and [licenses](licenses/) |
+
+</details>

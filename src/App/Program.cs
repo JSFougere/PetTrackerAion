@@ -69,7 +69,7 @@ public static class Program
         host.StartHidden = args.Contains("--minimized");
         using var tray = new System.Windows.Forms.NotifyIcon
         {
-            Text = "Pet Tracker",
+            Text = ProductIdentity.DisplayName,
             Visible = true,
             Icon = new System.Drawing.Icon(Path.Combine(AppContext.BaseDirectory, "PetTracker.ico"))
         };

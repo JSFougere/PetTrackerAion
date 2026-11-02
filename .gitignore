@@ -1,5 +1,8 @@
 **/bin/
 **/obj/
+.vs/
+*.suo
+*.user
 /build/
 /release/
 /test-results/
@@ -21,3 +24,5 @@ test-data*/
 *.lnk
 .env
 .env.*
+/docs/SECURITY-REVIEW*.md
+/security-reports/

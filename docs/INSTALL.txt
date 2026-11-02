@@ -1,9 +1,13 @@
-PET TRACKER
-Aion 2 pet collection tracker • Windows x64 • beta
+PETTRACKER AION 1.0.0
+Aion 2 pet collection tracker • Windows x64
 
 GET STARTED
-1. Download the installer from github.com/0Fox2Give/PetTracker/releases/tag/updates.
-   Run PetTracker.Desktop-win-stable-Setup.exe to install Pet Tracker.
+1. Run PetTrackerAion-1.0.0-Setup.exe to install this independent fork.
+   Launch PetTracker Aion from the desktop or Start menu shortcut.
+   Installation: %LOCALAPPDATA%\Programs\PetTrackerAion
+   Collection and settings: %LOCALAPPDATA%\PetTrackerAion
+   The original PetTracker installation and its data are not replaced.
+   Quit any other running copy from the Windows tray before launching this one.
 2. Install Npcap from https://npcap.com/#download if not already installed.
    Npcap is required for live tracking and is not bundled with Pet Tracker.
    Launch Pet Tracker from your desktop or Start menu before starting Aion 2.
@@ -12,6 +16,10 @@ GET STARTED
 3. Your first detected character creates My account and imports its collection.
    No account selection or setup is needed. If the game was already logged in
    when tracking started, return to character selection and log in again once.
+
+Automatic updates are not configured in this V1. Do not use the upstream
+installer or update channel to update this fork. Existing test data are not
+imported automatically; reconnect in game to populate the separate collection.
 
 No website account or sign-in is required. The app runtime and game portraits
 are included. If capture is unavailable, Pet Tracker opens connection help with
